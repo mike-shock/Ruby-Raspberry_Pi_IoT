@@ -1,0 +1,32 @@
+Tested:
++ BH1750		Receptor	I2C		Luminocity sensor
++ BME280		Receptor	I2C		Temperature, humidity & pressure sensor
++ BMP280		Receptor	I2C		Temperature & pressure sensor: 20-bit
++ DHT11			Receptor	special		Temperature & humidity sensor
++ DHT22			Receptor	special		Temperature & humidity sensor
++ DS18B20		Receptor	1-wire		Temperature sensor
++ MAX44009/GY49		Receptor	I2C		Luminocity sensor
++ Thermal_Sensor	Receptor	internal	Temperature sensor
+
++ LED			Effector	1-pin		Light
++ LED_RGB		Effector	3-pin		Light
+  LED PWM		Effector	1-pin		Light
+  WS2802 LED strip	Effector	SPI		Light
+  WS2812 12 LED Ring	Effector	1-pin		Light
+
+Not tested:
+  ADT7410i		Receptor	I2C		Temperature sensor: ±0.5°C Accurate, 16-bit Digital
+~ BMP085		Receptor	I2C		Pressure sensor: 16..19-bit
+~ BMP180		Receptor	I2C		Pressure sensor
+
+  ACM1602ni		Effector	I2C		LCD Controller: 5V, 2 lines x 16 characters
+  AQM0802i		Effector	I2C		LCD display 
+  WH1602		Effector			LCD display 
+
+  ADT7410i		Receptor	I2C		Temperature sensor: ±0.5°C Accurate, 16-bit Digital
+  D6T-44LI				I2C		
+  grid-eyei				I2C		
+  HD44780i				I2C		
+  HDC1000i				I2C		
+  MPL115a2i				I2C		
+  SI70xxi				I2C		

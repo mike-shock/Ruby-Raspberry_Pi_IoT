@@ -1,0 +1,43 @@
+require 'bus'
+
+# BH1750 - ambient light sensor
+class BH1750
+  DEVICE     = 0x23 # I2C sensor address
+  POWER_DOWN = 0x00 # off state
+  POWER_ON   = 0x01 # on state
+  RESET      = 0x07 # reset state: POWER_DOWN = 0x00
+
+  CONTINUOUS_LOW_RES_MODE = 0x13    # Measure with resolution 4.0 lx and timing ~16 ms
+  CONTINUOUS_HIGH_RES_MODE_1 = 0x10 # Measure with resolution 1.0 lx and timing ~120 ms
+  CONTINUOUS_HIGH_RES_MODE_2 = 0x11 # Measure with resolution 0.5 lx and timing ~120 ms
+  ONE_TIME_LOW_RES_MODE = 0x23      # Measure with resolution 4.0 lx, POWER DOWN after measuring
+  ONE_TIME_HIGH_RES_MODE_1 = 0x20   # Measure with resolution 1.0 lx, POWER DOWN after measuring
+  ONE_TIME_HIGH_RES_MODE_2 = 0x21   # Measure with resolution 0.5 lx, POWER DOWN after measuring
+
+  def initialize(i2c_bus='/dev/i2c-1')
+    @sensor_name = 'BH1750'
+    @i2c_bus = i2c_bus
+    @device = I2CDevice.new(address: DEVICE, driver: I2CDevice::Driver::I2CDev.new(@i2c_bus))
+    @resolution = ONE_TIME_HIGH_RES_MODE_1
+    @length = 2
+    @value = read_sensor
+  end
+
+  # Read raw data from sensor and convert it to numeric
+  def read_sensor
+    data = @device.i2cget(@resolution, @length)
+    @value = to_f(data)
+  end
+
+  # Return value in Lux
+  def lux
+    read_sensor
+    @value
+  end
+
+private
+  # Convert 2 bytes of sensor data to a float number
+  def to_f(data)
+    return ((data[1].ord + (256 * data[0].ord)) / 1.2) 
+  end
+end
