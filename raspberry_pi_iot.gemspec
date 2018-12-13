@@ -1,11 +1,11 @@
 Gem::Specification.new do |s|
   s.name        = 'raspberry_pi_iot'
-  s.version     = '0.0.5'
-  s.date        = '2018-12-12'
+  s.version     = '0.0.6'
+  s.date        = '2018-12-13'
   s.summary     = "IoT library for Raspberry Pi projects in Ruby"
   s.description = 'A set of classes for IoT (Inrternet of Things) / physical computing with Raspberry Pi'
   s.authors     = ['Mike Shock (Mikhail V. Shokhirev)']
-  s.email       = 'mshock25@qmail.com'
+  s.email       = 'mshock25@gmail.com'
   s.license     = 'MIT'
   s.files       = Dir["lib/*"] + Dir["doc/*"]
   s.homepage    = 'https://github.com/mike-shock/Ruby-Raspberry_Pi_IoT/'
