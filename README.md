@@ -30,7 +30,7 @@ To use this library you should do:
    
    sudo make install
 
-3. Download the gem from this repository and install it:
+3. Install the latest version of gem:
 
-   sudo  gem install ./raspberry_pi_iot.gem
+   sudo  gem install raspberry_pi_iot.gem
    
