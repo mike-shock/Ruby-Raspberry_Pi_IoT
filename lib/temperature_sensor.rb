@@ -1,4 +1,4 @@
-require 'digital_receptor'
+require 'digital_sensor'
 
 # TemperatureSensor - temperature sensing receptor
 class TemperatureSensor < DigitalSensor

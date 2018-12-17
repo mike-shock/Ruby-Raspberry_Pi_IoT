@@ -14,7 +14,3 @@ class DigitalReceptor < Receptor
   end
 
 end
-
-# DigitalSensor - a synonym for DigitalReceptor
-class DigitalSensor < DigitalReceptor
-end

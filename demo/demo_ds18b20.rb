@@ -1,5 +1,6 @@
 #!/usr/bin/ruby
 
+$LOAD_PATH << "../lib"
 require "ds18b20"
 
 sensor = DS18B20.new

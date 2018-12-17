@@ -5,7 +5,7 @@ module RaspberryPi
   class ThermalSensor < TemperatureSensor
 
     def initialize
-      @sensor_name = 'DS18B20'
+      @name = 'Internal Thermal Zone'
       super
     end
 

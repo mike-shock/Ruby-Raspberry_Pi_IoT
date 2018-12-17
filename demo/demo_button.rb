@@ -1,5 +1,6 @@
 #!/usr/bin/ruby
 
+$LOAD_PATH << "../lib"
 require "button"
 
 button = Button.new(21)

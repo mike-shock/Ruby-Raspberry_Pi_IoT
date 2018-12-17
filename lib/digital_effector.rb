@@ -47,10 +47,6 @@ class DigitalEffector < Effector
   end
 
   def off?(pin=@pin)
-    not on(pin)
+    !on(pin)
   end
-end
-
-# DigitalActuator - synonym for DigitalEffector
-class DigitalActuator < DigitalEffector
 end

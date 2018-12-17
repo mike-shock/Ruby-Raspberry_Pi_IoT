@@ -1,5 +1,6 @@
 #!/usr/bin/ruby
 
+$LOAD_PATH << "../lib"
 require 'bh1750'
 
   light_sensor = BH1750.new

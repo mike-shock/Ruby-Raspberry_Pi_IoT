@@ -1,8 +1,11 @@
 #!/usr/bin/ruby
 
+$LOAD_PATH << "../lib"
 require "led_rgb"
 
 rgb = LED::RGB.new(17, 27, 22)
+
+printf "=== %s DEMO ===\n", rgb.name
 
 #rgb.red_on
 #rgb.green_on

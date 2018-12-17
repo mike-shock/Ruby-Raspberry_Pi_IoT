@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+$LOAD_PATH << "../lib"
 require "dht_sensor"
 
 sensor = DHT11.new(23)

@@ -1,20 +1,18 @@
 #!/usr/bin/ruby
 
+$LOAD_PATH << "../lib"
 require "thermal_sensor"
 
-sensor1 = RaspberryPi::ThermalSensor.new
+sensor = RaspberryPi::ThermalSensor.new
 
-12.times do
-  sensor1.read_data
-  print "Temperature: "
-  printf "%7.4f°C ",  sensor1.celsius
-  printf "%7.4f°Ré ", sensor1.reaumur
-  printf "%7.4f°F ",  sensor1.fahrenheit
-  printf "%7.4f K ",  sensor1.kelvin
-  print "\n"
+printf "=== %s DEMO ===\n", sensor.name
+
+12.times do |n|
+  sensor.read_data
+  printf "%02d Temperature: ", n
+  printf "%7.4f°C ", sensor.celsius
+  printf "%7.4f°Ré ", sensor.reaumur
+  printf "%7.4f°F ",  sensor.fahrenheit
+  printf "%7.4f K \n",  sensor.kelvin
   sleep 1
 end
-
-sensor2 = ThermalSensor.new
-print "\n"
-printf "%7.4f°C ",  sensor2.celsius

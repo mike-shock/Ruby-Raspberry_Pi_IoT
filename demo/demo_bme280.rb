@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+$LOAD_PATH << "../lib"
 require "bmx_sensor"
 
 sensor = BME280.new

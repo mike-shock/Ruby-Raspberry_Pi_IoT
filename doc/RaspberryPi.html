@@ -139,10 +139,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Revision           : a22082 SoC                : BCM2837 RAM               
-: 1024Mb Storage            : MicroSD USB ports          : 4 (excluding
-power) Ethernet ports     : 1 Wi-fi              : True Bluetooth         
-: True Camera ports (CSI) : 1 Display ports (DSI): 1.</p>
+<p>Return hardware info as a hash.</p>
 </div></span>
   
 </li>
@@ -151,7 +148,7 @@ power) Ethernet ports     : 1 Wi-fi              : True Bluetooth
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#pi_model-class_method" title="pi_model (class method)">.<strong>pi_model</strong>  &#x21d2; Object </a>
+      <a href="#model_name-class_method" title="model_name (class method)">.<strong>model_name</strong>(source = &#39;proc&#39;)  &#x21d2; Object </a>
     
 
     
@@ -166,7 +163,8 @@ power) Ethernet ports     : 1 Wi-fi              : True Bluetooth
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Pi Model 3B V1.2.</p>
+<p>Return the model name <a
+href="https://www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board-version">www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board-version</a>/.</p>
 </div></span>
   
 </li>
@@ -193,10 +191,7 @@ power) Ethernet ports     : 1 Wi-fi              : True Bluetooth
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Revision           : a22082 SoC                : BCM2837 RAM               
-: 1024Mb Storage            : MicroSD USB ports          : 4 (excluding
-power) Ethernet ports     : 1 Wi-fi              : True Bluetooth         
-: True Camera ports (CSI) : 1 Display ports (DSI): 1</p>
+<p>Return hardware info as a hash</p>
 
 
   </div>
@@ -210,6 +205,9 @@ power) Ethernet ports     : 1 Wi-fi              : True Bluetooth
       <pre class="lines">
 
 
+17
+18
+19
 20
 21
 22
@@ -222,13 +220,10 @@ power) Ethernet ports     : 1 Wi-fi              : True Bluetooth
 29
 30
 31
-32
-33
-34
-35</pre>
+32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/raspberry_pi.rb', line 20</span>
+      <pre class="code"><span class="info file"># File 'lib/raspberry_pi.rb', line 17</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_hardware_info'>hardware_info</span>
   <span class='id identifier rubyid_info'>info</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -252,9 +247,9 @@ power) Ethernet ports     : 1 Wi-fi              : True Bluetooth
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="pi_model-class_method">
+  <h3 class="signature " id="model_name-class_method">
   
-    .<strong>pi_model</strong>  &#x21d2; <tt>Object</tt> 
+    .<strong>model_name</strong>(source = &#39;proc&#39;)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -263,7 +258,8 @@ power) Ethernet ports     : 1 Wi-fi              : True Bluetooth
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Pi Model 3B V1.2</p>
+<p>Return the model name <a
+href="https://www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board-version">www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board-version</a>/</p>
 
 
   </div>
@@ -280,13 +276,25 @@ power) Ethernet ports     : 1 Wi-fi              : True Bluetooth
 5
 6
 7
-8</pre>
+8
+9
+10
+11
+12
+13
+14</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/raspberry_pi.rb', line 5</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_pi_model'>pi_model</span>
-  <span class='id identifier rubyid_info'>info</span> <span class='op'>=</span> <span class='backtick'>`</span><span class='tstring_content'>pinout | grep -Eo &quot;Pi Model[^|]+&quot;</span><span class='tstring_end'>`</span></span> 
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_model_name'>model_name</span><span class='lparen'>(</span><span class='id identifier rubyid_source'>source</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>proc</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_info'>info</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_source'>source</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>proc</span><span class='tstring_end'>&#39;</span></span>
+    <span class='backtick'>`</span><span class='tstring_content'>cat /proc/device-tree/model</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>elsif</span>
+    <span class='backtick'>`</span><span class='tstring_content'>pinout | grep -Eo &quot;Pi Model[^|]+&quot;</span><span class='tstring_end'>`</span></span>
+  <span class='kw'>else</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>N/A</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
   <span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -299,7 +307,7 @@ power) Ethernet ports     : 1 Wi-fi              : True Bluetooth
 </div>
 
       <div id="footer">
-  Generated on Tue Dec 11 17:46:25 2018 by
+  Generated on Mon Dec 17 17:41:39 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.3.3).
 </div>

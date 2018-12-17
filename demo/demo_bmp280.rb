@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+$LOAD_PATH << "../lib"
 require 'i2c'
 require "bmx_sensor"
 

@@ -11,6 +11,7 @@ class LED
     @red   = red
     @green = green
     @blue  = blue
+    self.name = 'RGB LED'
   end
 
   def red_on

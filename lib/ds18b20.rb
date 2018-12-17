@@ -9,7 +9,7 @@ class DS18B20 < TemperatureSensor
     if @sensor_file
       @temperature = read_data
     else
-      raise "#{@sensor_name} - Sensor NOT FOUND!"
+      raise "#{self.name} - Sensor NOT FOUND!"
     end
   end
 

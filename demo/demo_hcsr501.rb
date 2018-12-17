@@ -1,5 +1,6 @@
 #!/usr/bin/ruby
 
+$LOAD_PATH << "../lib"
 require "hcsr501"
 
 pir = HCSR501.new(17)

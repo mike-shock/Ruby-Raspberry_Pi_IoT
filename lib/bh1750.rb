@@ -14,9 +14,12 @@ class BH1750
   ONE_TIME_HIGH_RES_MODE_1 = 0x20   # Measure with resolution 1.0 lx, POWER DOWN after measuring
   ONE_TIME_HIGH_RES_MODE_2 = 0x21   # Measure with resolution 0.5 lx, POWER DOWN after measuring
 
-  def initialize(i2c_bus='/dev/i2c-1')
+  def initialize(device_address=DEVICE, bus_number=1)
     @sensor_name = 'BH1750'
-    @i2c_bus = i2c_bus
+    Bus::I2C.bus_number = bus_number
+    @device_address = device_address
+
+    @i2c_bus = Bus::I2C.bus
     @device = I2CDevice.new(address: DEVICE, driver: I2CDevice::Driver::I2CDev.new(@i2c_bus))
     @resolution = ONE_TIME_HIGH_RES_MODE_1
     @length = 2

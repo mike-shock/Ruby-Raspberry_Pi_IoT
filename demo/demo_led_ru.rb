@@ -1,5 +1,6 @@
 #!/usr/bin/ruby
 
+$LOAD_PATH << "../lib"
 require "led"
 
 светодиод = LED.создать(18)

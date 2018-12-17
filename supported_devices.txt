@@ -4,7 +4,7 @@ Tested:
 + BMP280		Receptor	I2C		Temperature & pressure sensor: 20-bit
 + DHT11			Receptor	special		Temperature & humidity sensor
 + DHT22			Receptor	special		Temperature & humidity sensor
-+ DS18B20		Receptor	1-wire		Temperature sensor
++ DS18B20		Receptor	1-wire		Temperature sensor: high precision
 + MAX44009/GY49		Receptor	I2C		Luminocity sensor
 + Thermal_Sensor	Receptor	internal	Temperature sensor
 
@@ -13,8 +13,13 @@ Tested:
   LED PWM		Effector	1-pin		Light
   WS2802 LED strip	Effector	SPI		Light
   WS2812 12 LED Ring	Effector	1-pin		Light
+  WS2812 LED Matrix	Effector	1-pin		Light
 
-Not tested:
+To add:
+- SenseHAT		R+E		HAT		LEDs + T,H,P sensor + hyroscope + Joystick
+
+
+Not implemented:
   ADT7410i		Receptor	I2C		Temperature sensor: ±0.5°C Accurate, 16-bit Digital
 ~ BMP085		Receptor	I2C		Pressure sensor: 16..19-bit
 ~ BMP180		Receptor	I2C		Pressure sensor

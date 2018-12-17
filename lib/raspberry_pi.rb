@@ -1,27 +1,19 @@
 module RaspberryPi
-# https://www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board-version/
 
-  # Pi Model 3B V1.2
-  def self.pi_model_old
-    info = `pinout | grep -Eo "Pi Model[^|]+"`
+  # Return the model name
+  # https://www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board-version/
+  def self.model_name(source='proc')
+    info = if source == 'proc'
+      `cat /proc/device-tree/model`
+    elsif
+      `pinout | grep -Eo "Pi Model[^|]+"`
+    else
+      'N/A'
+    end
     info.strip
   end
 
-  def self.pi_model
-    info = `cat /proc/device-tree/model`
-    info.strip
-  end
-
-  # Revision           : a22082
-  # SoC                : BCM2837
-  # RAM                : 1024Mb
-  # Storage            : MicroSD
-  # USB ports          : 4 (excluding power)
-  # Ethernet ports     : 1
-  # Wi-fi              : True
-  # Bluetooth          : True
-  # Camera ports (CSI) : 1
-  # Display ports (DSI): 1
+  # Return hardware info as a hash
   def self.hardware_info
     info = {}
     lines = ` pinout | grep ': '`

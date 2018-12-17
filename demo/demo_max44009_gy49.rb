@@ -1,6 +1,7 @@
 #!/usr/bin/ruby
 require 'max44009'
 
+$LOAD_PATH << "../lib"
 sensor = MAX44009.new
 
 32.times do |n|
