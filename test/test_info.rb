@@ -6,7 +6,7 @@ $LOAD_PATH << "../lib"
 require 'iot'
 require 'raspberry_pi'
 
-class RaspberryPiIoTTest < Minitest::Test
+class RaspberryPiIoTInfoTest < Minitest::Test
 
   def test_model_name
     assert_equal RaspberryPi.model_name()[0..11], "Raspberry Pi"

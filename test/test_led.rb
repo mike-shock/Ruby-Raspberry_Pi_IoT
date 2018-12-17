@@ -5,7 +5,7 @@ require 'minitest/autorun'
 $LOAD_PATH << "../lib"
 require 'led'
 
-class RaspberryPiIoTTest < Minitest::Test
+class RaspberryPiIoTLedTest < Minitest::Test
   def setup
     @pin = 1
     @color = :red
