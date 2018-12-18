@@ -1,13 +1,13 @@
 Gem::Specification.new do |s|
   s.name        = 'raspberry_pi_iot'
-  s.version     = '0.0.7'
-  s.date        = '2018-12-17'
+  s.version     = '0.0.8'
+  s.date        = '2018-12-18'
   s.summary     = "IoT library for Raspberry Pi projects in Ruby"
   s.description = 'A set of classes for IoT (Inrternet of Things) / physical computing with Raspberry Pi'
   s.authors     = ['Mike Shock (Mikhail V. Shokhirev)']
   s.email       = 'mshock25@gmail.com'
   s.license     = 'MIT'
-  s.files       = Dir["lib/*"] + Dir["doc/*"]
+  s.files       = Dir["lib/*"] + Dir["doc/*"] + Dir["test/*"]
   s.homepage    = 'https://github.com/mike-shock/Ruby-Raspberry_Pi_IoT/'
   s.add_runtime_dependency 'rpi_gpio',       '~> 0.3.3', '>= 0.3.3'
   s.add_runtime_dependency 'i2c-devices',    '~> 0.0.6', '>= 0.0.6'

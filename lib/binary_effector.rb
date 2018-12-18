@@ -10,7 +10,3 @@ class BinaryEffector < DigitalEffector
   end
 
 end
-
-# BinaryActuator - synomym for BinaryEffector
-class BinaryActuator < BinaryEffector
-end

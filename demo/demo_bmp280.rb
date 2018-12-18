@@ -1,15 +1,14 @@
 #!/usr/bin/env ruby
 
 $LOAD_PATH << "../lib"
-require 'i2c'
-require "bmx_sensor"
+require 'bmx_sensor'
 
 sensor = BMP280.new
 printf "%s\n", sensor.to_s
 
-while true do
+12.times do |n|
   sensor.read_data
-  printf "T: %7.4f°C ", sensor.celsius
+  printf "%02d T: %7.4f°C ", n, sensor.celsius
   printf "P: %7.4f mmHg ", sensor.pressure(:mmHg)
   printf "%7.4f hPa ",  sensor.pressure(:hPa)
 #  printf "%7.4f kPa ",  sensor.pressure(:kPa)

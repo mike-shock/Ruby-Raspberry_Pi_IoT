@@ -62,15 +62,46 @@
 
 <p>A Ruby library for IoT (physical computing) projects with Raspberry Pi.</p>
 
-<p>Why I made it. I&#39;m a software developer and a maker. And I do love
-Raspberry Pi - it&#39;s such a fun to do physical programming! But I love
-to program in Ruby. So I tried to make a pragmatic set of useful IoT
-libraries for the Ruby language for all who want to program for Raspberry
-Pi in Ruby.</p>
+<p>Why I made it.</p>
+
+<p>I&#39;m a software developer and a maker. And I do love Raspberry Pi -
+it&#39;s such a fun to do physical programming! But I love to program in
+Ruby. So I tried to make a pragmatic set of useful IoT libraries for the
+Ruby language for all who want to program for Raspberry Pi in Ruby.</p>
+
+<p>To use this library you should do:</p>
+<ol><li>
+<p>Install the Ruby development version (to compile the extensions):</p>
+</li></ol>
+
+<p>sudo apt-get install ruby-dev</p>
+<ol><li>
+<p>Download and install the bcm2835-1.xx.tar.gz library:</p>
+</li></ol>
+
+<p>wget <a
+href="http://www.airspayce.com/mikem/bcm2835/bcm2835-1.58.tar.gz">www.airspayce.com/mikem/bcm2835/bcm2835-1.58.tar.gz</a></p>
+
+<p>tar zxvf bcm2835-1.xx.tar.gz</p>
+
+<p>cd bcm2835-1.xx</p>
+
+<p>./configure</p>
+
+<p>make</p>
+
+<p>sudo make check</p>
+
+<p>sudo make install</p>
+<ol><li>
+<p>Install the latest version of gem:</p>
+</li></ol>
+
+<p>sudo gem install raspberry_pi_iot.gem</p>
 </div></div>
 
       <div id="footer">
-  Generated on Mon Dec 17 17:41:38 2018 by
+  Generated on Tue Dec 18 16:03:38 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.3.3).
 </div>

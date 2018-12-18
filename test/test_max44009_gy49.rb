@@ -3,15 +3,15 @@
 require 'minitest/autorun'
 
 $LOAD_PATH << "../lib"
-require 'bh1750'
+require 'max44009'
 
-class RaspberryPiIoT_BH1750Test < MiniTest::Test
+class RaspberryPiIoT_MAX44009Test < MiniTest::Test
 
   def setup
     @bus = 1
-    @address = 0x23
+    @address = 0x4a
     @addr_s  = sprintf("%02x", @address)
-    @sensor = BH1750.new(@address, @bus)
+    @sensor = MAX44009.new
   end
 
   def test_i2c_bus

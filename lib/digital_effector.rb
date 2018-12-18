@@ -47,6 +47,23 @@ class DigitalEffector < Effector
   end
 
   def off?(pin=@pin)
-    !on(pin)
+    !on?(pin)
+  end
+
+private
+  def pin_number(pin)
+    if pin.class.name == 'Fixnum' # by number
+      pin
+    elsif @pins[pin]              # by name
+      @pins[pin]
+    end
+  end
+
+  def high?(pin=@pin)
+    RPi::GPIO.high? pin
+  end
+
+  def low?(pin=@pin)
+    RPi::GPIO.low? pin
   end
 end

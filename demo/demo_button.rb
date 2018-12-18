@@ -14,7 +14,7 @@ printf "Waiting for %d presses...\n", p
 s = button.wait_for_presses p
 printf "Presses: %s %s\n", s, (button.double_press? ? "Double" : "2 Singles")
 
-t = 25
+t = 12
 printf "Testing %d times...\n", t
 
 t.times do |n|

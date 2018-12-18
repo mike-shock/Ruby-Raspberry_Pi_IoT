@@ -7,14 +7,21 @@ led = LED.new(18)
 
 printf "=== %s DEMO ===\n", led.name
 
+  led.on
+  is_on  = led.on?
+  is_off = led.off?
+  printf "ON: on?=%s, off?=%s\n", is_on, is_off
+  led.off
+  is_on  = led.on?
+  is_off = led.off?
+  printf "OFF: on?=%s, off?=%s\n", is_on, is_off
+
 5.times do |n|
   print ' ', n, ' '
   led.on
-  print (led.on? ? 'X':'o')
   sleep 1
   led.off
   sleep 1
-  print (led.on? ? 'X':'o')
 end
 
 print "\n Blinking x 3...\n"

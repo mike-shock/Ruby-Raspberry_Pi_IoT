@@ -4,7 +4,6 @@ gem 'i2c-bme280'
 require 'i2c/bme280'
 require 'humiture_sensor'
 
-
 # BMP/BME humidity, temperature & atmospheric pressure sensor family
 class BMxSensor < HumitureSensor
 

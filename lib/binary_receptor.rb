@@ -17,7 +17,3 @@ class BinaryReceptor < Receptor
     RPi::GPIO.low? @pin
   end
 end
-
-# BinarySensor - a synonym for BinaryReceptor
-class BinarySensor < BinaryReceptor
-end
