@@ -7,10 +7,12 @@ class LED < BinaryEffector
     self.name = 'LED'
   end
 
+  # Turn on the LED.
   def on(pin=@pin)
     super(pin)
   end
 
+  # Turn off the LED.
   def off(pin=@pin)
     super(pin)
   end
@@ -25,12 +27,14 @@ class LED < BinaryEffector
     end
   end
 
+  # Turn the LED on for N seconds.
   def on_for(seconds=1)
     on
     sleep seconds
     off
   end
 
+  # Turn the LED off for N seconds.
   def off_for(seconds=1)
     off
     sleep seconds

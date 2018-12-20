@@ -255,7 +255,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Is button not pressed?.</p>
+<p>Is button not being pressed?.</p>
 </div></span>
   
 </li>
@@ -279,8 +279,30 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Is button pressed?.</p>
+<p>Is button being pressed?.</p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_timeout-instance_method" title="#set_timeout (instance method)">#<strong>set_timeout</strong>(timeout)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -305,6 +327,28 @@
     <span class="summary_desc"><div class='inline'>
 <p>Was the button pressed once?.</p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#timeout%3F-instance_method" title="#timeout? (instance method)">#<strong>timeout?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -360,7 +404,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#wait_for_presses-instance_method" title="#wait_for_presses (instance method)">#<strong>wait_for_presses</strong>(attempts = 2)  &#x21d2; Object </a>
+      <a href="#wait_for_presses-instance_method" title="#wait_for_presses (instance method)">#<strong>wait_for_presses</strong>(attempts = 2, timeout = @timeout)  &#x21d2; Object </a>
     
 
     
@@ -377,6 +421,50 @@
     <span class="summary_desc"><div class='inline'>
 <p>Wait for several sequential presses.</p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#was_not_pressed%3F-instance_method" title="#was_not_pressed? (instance method)">#<strong>was_not_pressed?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#was_pressed%3F-instance_method" title="#was_pressed? (instance method)">#<strong>was_pressed?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -442,7 +530,11 @@
 11
 12
 13
-14</pre>
+14
+15
+16
+17
+18</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/button.rb', line 7</span>
@@ -453,8 +545,12 @@
   <span class='ivar'>@measure_pause</span> <span class='op'>=</span> <span class='float'>0.01</span>
   <span class='ivar'>@long_click</span> <span class='op'>=</span> <span class='float'>1.0</span>
   <span class='ivar'>@short_interval</span> <span class='op'>=</span> <span class='float'>0.2</span>
+  <span class='ivar'>@timeout</span> <span class='op'>=</span> <span class='int'>30</span>
   <span class='ivar'>@intervals</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-<span class='kw'>end</span></pre>
+  <span class='comment'># samples:        wait time    press time     wait time    press time
+</span>  <span class='comment'># double press: [[1.486804292, 0.090814152], [0.131284967, 0.13125429]]
+</span>  <span class='comment'># long press:   [[0.910878286, 1.109352219]]
+</span><span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -574,12 +670,12 @@
       <pre class="lines">
 
 
-57
-58
-59</pre>
+69
+70
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/button.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'lib/button.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_double_press?'>double_press?</span><span class='lparen'>(</span><span class='id identifier rubyid_intervals'>intervals</span><span class='op'>=</span><span class='ivar'>@intervals</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_intervals'>intervals</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>==</span> <span class='int'>2</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_intervals'>intervals</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>&lt;=</span> <span class='ivar'>@short_interval</span>
@@ -628,12 +724,12 @@
       <pre class="lines">
 
 
-67
-68
-69</pre>
+79
+80
+81</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/button.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/button.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_long_press?'>long_press?</span><span class='lparen'>(</span><span class='id identifier rubyid_intervals'>intervals</span><span class='op'>=</span><span class='ivar'>@intervals</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_intervals'>intervals</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>==</span> <span class='int'>1</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_intervals'>intervals</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>&gt;=</span> <span class='ivar'>@long_click</span>
@@ -655,7 +751,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Is button not pressed?</p>
+<p>Is button not being pressed?</p>
 
 
   </div>
@@ -682,12 +778,12 @@
       <pre class="lines">
 
 
-22
-23
-24</pre>
+26
+27
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/button.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/button.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_not_pressed?'>not_pressed?</span>
   <span class='id identifier rubyid_high?'>high?</span>
@@ -709,7 +805,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Is button pressed?</p>
+<p>Is button being pressed?</p>
 
 
   </div>
@@ -736,15 +832,45 @@
       <pre class="lines">
 
 
-17
-18
-19</pre>
+21
+22
+23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/button.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'lib/button.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pressed?'>pressed?</span>
   <span class='id identifier rubyid_low?'>low?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_timeout-instance_method">
+  
+    #<strong>set_timeout</strong>(timeout)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/button.rb', line 83</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_set_timeout'>set_timeout</span><span class='lparen'>(</span><span class='id identifier rubyid_timeout'>timeout</span><span class='rparen'>)</span>
+  <span class='ivar'>@timeout</span> <span class='op'>=</span> <span class='id identifier rubyid_timeout'>timeout</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -790,15 +916,75 @@
       <pre class="lines">
 
 
-52
-53
-54</pre>
+64
+65
+66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/button.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/button.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_single_press?'>single_press?</span><span class='lparen'>(</span><span class='id identifier rubyid_intervals'>intervals</span><span class='op'>=</span><span class='ivar'>@intervals</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_intervals'>intervals</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>==</span> <span class='int'>1</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="timeout?-instance_method">
+  
+    #<strong>timeout?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+87
+88
+89
+90
+91
+92
+93</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/button.rb', line 87</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_timeout?'>timeout?</span>
+  <span class='id identifier rubyid_min_wait_time'>min_wait_time</span> <span class='op'>=</span> <span class='float'>0.0</span>
+  <span class='ivar'>@intervals</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_interval'>interval</span><span class='op'>|</span>
+    <span class='id identifier rubyid_min_wait_time'>min_wait_time</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_min_wait_time'>min_wait_time</span><span class='comma'>,</span> <span class='id identifier rubyid_interval'>interval</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_min'>min</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_min_wait_time'>min_wait_time</span> <span class='op'>&gt;</span> <span class='ivar'>@timeout</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -844,12 +1030,12 @@
       <pre class="lines">
 
 
-62
-63
-64</pre>
+74
+75
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/button.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/button.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_triple_press?'>triple_press?</span><span class='lparen'>(</span><span class='id identifier rubyid_intervals'>intervals</span><span class='op'>=</span><span class='ivar'>@intervals</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_intervals'>intervals</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>==</span> <span class='int'>3</span>
@@ -885,12 +1071,12 @@
       <pre class="lines">
 
 
-27
-28
-29</pre>
+39
+40
+41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/button.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/button.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_wait_for_press'>wait_for_press</span>
   <span class='id identifier rubyid_wait_for_presses'>wait_for_presses</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
@@ -903,7 +1089,7 @@
       <div class="method_details ">
   <h3 class="signature " id="wait_for_presses-instance_method">
   
-    #<strong>wait_for_presses</strong>(attempts = 2)  &#x21d2; <tt>Object</tt> 
+    #<strong>wait_for_presses</strong>(attempts = 2, timeout = @timeout)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -926,34 +1112,34 @@
       <pre class="lines">
 
 
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
 44
 45
 46
 47
 48
-49</pre>
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/button.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'lib/button.rb', line 44</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_wait_for_presses'>wait_for_presses</span><span class='lparen'>(</span><span class='id identifier rubyid_attempts'>attempts</span><span class='op'>=</span><span class='int'>2</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_wait_for_presses'>wait_for_presses</span><span class='lparen'>(</span><span class='id identifier rubyid_attempts'>attempts</span><span class='op'>=</span><span class='int'>2</span><span class='comma'>,</span> <span class='id identifier rubyid_timeout'>timeout</span><span class='op'>=</span><span class='ivar'>@timeout</span><span class='rparen'>)</span>
   <span class='ivar'>@intervals</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_attempts'>attempts</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_interval'>interval</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     <span class='id identifier rubyid_timer'>timer</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
-    <span class='kw'>while</span> <span class='id identifier rubyid_not_pressed?'>not_pressed?</span> <span class='kw'>do</span>
+    <span class='kw'>while</span> <span class='id identifier rubyid_not_pressed?'>not_pressed?</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='op'>-</span><span class='id identifier rubyid_timer'>timer</span><span class='rparen'>)</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_timeout'>timeout</span> <span class='kw'>do</span>
       <span class='id identifier rubyid_sleep'>sleep</span> <span class='ivar'>@measure_pause</span>
     <span class='kw'>end</span>
     <span class='id identifier rubyid_interval'>interval</span> <span class='op'>&lt;&lt;</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='op'>-</span><span class='id identifier rubyid_timer'>timer</span>
@@ -971,12 +1157,116 @@
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="was_not_pressed?-instance_method">
+  
+    #<strong>was_not_pressed?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/button.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_was_not_pressed?'>was_not_pressed?</span>
+  <span class='op'>!</span><span class='id identifier rubyid_was_pressed?'>was_pressed?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="was_pressed?-instance_method">
+  
+    #<strong>was_pressed?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/button.rb', line 30</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_was_pressed?'>was_pressed?</span>
+  <span class='ivar'>@intervals</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
       <div id="footer">
-  Generated on Tue Dec 18 16:03:42 2018 by
+  Generated on Thu Dec 20 18:09:42 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.3.3).
 </div>

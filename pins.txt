@@ -1,5 +1,6 @@
-pin numbers: [physical] (BCM) {wPi}
+Connections for testing
 
+Pin numbering: [physical] (BCM) {wPi}
 
 LED (-)---short---R330Ohm---black-----GND--- [20] GND
     (+)---long--------------yellow---------- [22] (25)
@@ -18,7 +19,7 @@ PWM (+)---long--------------yellow---------- [12] (18)
 NeoPixel
     VCC---------------------red-------VCC--- [01] +5V
     GND---------------------black-----GND--- [06] GND
-    DIN---------------------black-----DIN--- [12] (18) PWM: GPIO10, GPIO12, GPIO18 (PWM0) or GPIO21 !
+    DIN---------------------purple----DIN--- [12] (18) PWM: GPIO10, GPIO12, GPIO18 (PWM0) or GPIO21 !
 
 
 Button ---------------------black-----GND--- [39] GND
@@ -29,13 +30,14 @@ DHT11  ---------------------red-------VCC--- [02] 5V
 DHT22  ---------------------black-----GND--- [14] GND
        ---------------------purple----DATA-- [16] (23)
 
-
+I2C:
 BH1750  --------------------red-------VCC--- [04] 5V
 MAX44009--------------------blue------GND--- [06] GND
 BME280  --------------------yellow----SCL--- [05] I2C CLOCK
 BMP280  --------------------green-----SDA--- [03] I2C DATA
 
 
+1-wire:
 DS18B20---------------------black-----GND--- [06] GND
        ---+-----------------red-------VCC--- [01] 3.3V
           |

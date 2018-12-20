@@ -7,12 +7,15 @@ rgb = LED::RGB.new(17, 27, 22)
 
 printf "=== %s DEMO ===\n", rgb.name
 
-#rgb.red_on
-#rgb.green_on
-#rgb.blue_on
-#sleep 2
-#rgb.off :all
-#sleep 1
+rgb.red_on
+sleep 0.25
+rgb.green_on
+sleep 0.25
+rgb.blue_on
+sleep 0.25
+sleep 2
+rgb.off :all
+sleep 0.5
 
 1.times do |n|
   [:red, :green, :blue, :yellow, :aqua].each do |color|
@@ -34,9 +37,8 @@ rgb.blink [:red, :blue], 2
 sleep 0.5
 
 print "Blinking SOS...\n"
-rgb.blink :red, 3, 0.25, 0.5
+rgb.blink :red, 3, 0.25, 0.25
 sleep 1
-rgb.blink :red, 3, 0.5, 0.5
+rgb.blink :red, 3, 0.5, 0.25
 sleep 1
-rgb.blink :red, 3, 0.25, 0.5
-
+rgb.blink :red, 3, 0.25, 0.25

@@ -14,45 +14,25 @@ class LED
     self.name = 'RGB LED'
   end
 
-  def red_on
-    DigitalEffector.on @red
-  end
-
-  def red_off
-    DigitalEffector.off @red
-  end
-
-  def green_on
-    DigitalEffector.on @green
-  end
-
-  def green_off
-    DigitalEffector.off @green
-  end
-
-  def blue_on
-    DigitalEffector.on @blue
-  end
-
-  def blue_off
-    DigitalEffector.off @blue
-  end
-
-  def on(color)
+  def on(color=:all)
     color = :aoi if color == :aqua
     case color
     when :red
-      red_on
+      super @red
     when :green
-      green_on
+      super @green
     when :blue
-      blue_on
+      super @blue
     when :yellow
-      red_on
-      green_on
+      super @red
+      super @green
     when :aoi
-      blue_on
-      green_on
+      super @blue
+      super @green
+    when :all
+      super @red
+      super @green
+      super @blue
     else
     end
   end
@@ -61,30 +41,33 @@ class LED
     color = :aoi if color == :aqua
     case color
     when :red
-      red_off
+      super @red
     when :green
-      green_off
+      super @green
     when :blue
-      blue_off
+      super @blue
     when :yellow
-      red_off
-      green_off
+      super @red
+      super @green
     when :aoi
-      blue_off
-      green_off
+      super @blue
+      super @green
     when :all
-      all_off
+      super @red
+      super @green
+      super @blue
     else
       all_off
     end
   end
 
-  def all_off
-    red_off
-    green_off
-    blue_off
+  def all_on
+    on :all
   end
 
+  def all_off
+    off :all
+  end
 
   def blink(list = :all, repeat=3, switched_on=0.25, switched_off=0.5)
     colors = (list == :all) ? [:red, :green, :blue] : (list.class == Array ? list : [list])

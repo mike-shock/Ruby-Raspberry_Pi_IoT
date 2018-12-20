@@ -9,13 +9,13 @@ class DigitalEffector < Effector
   @pins = {} # GPIO pins
 
   def initialize(pins, state=:low)
-    @states = {}
-    @pins = pins
+    @states = {} # ON / Off states for pin numbers
+    @pins = pins # DigitalEffector.new {red: 17, green: 28, blue: 22}
     @pins.each_value do |pin|
       RPi::GPIO.setup pin, :as => :output, :initialize => state
       @states[pin] = (state == :high)
     end
-    @pin = pins.values[0]
+    @pin = pins.values[0] # default pin
   end
 
   def self.on(pin=@pin)
@@ -27,23 +27,17 @@ class DigitalEffector < Effector
   end
 
   def on(pin=@pin)
-    BinaryEffector.on @pin
-    @states[pin] = true
+    DigitalEffector.on pin
+    @states[pin_number(pin)] = true
   end
 
   def off(pin=@pin)
-    BinaryEffector.off @pin
-    @states[pin] = false
+    DigitalEffector.off pin
+    @states[pin_number(pin)] = false
   end
 
   def on?(pin=@pin)
-    state = nil
-    if pin.class.name == 'Fixnum' # by number
-      state = @states[pin]
-    elsif @pins[pin]              # by name
-      state = @states[@pins[pin]]
-    end
-    state
+    @states[pin_number(pin)]
   end
 
   def off?(pin=@pin)

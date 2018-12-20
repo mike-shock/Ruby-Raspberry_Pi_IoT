@@ -35,11 +35,11 @@ class RaspberryPiIoT_LedTest < Minitest::Test
   end
 
   def test_sos
+    3.times { @led.on_for(0.25); @led.off_for(0.25) }
+    sleep 1
     3.times { @led.on_for(0.5); @led.off_for(0.25) }
-    sleep 0.5
-    3.times { @led.on_for(0.15); @led.off_for(0.25) }
-    sleep 0.5
-    3.times { @led.on_for(0.5); @led.off_for(0.25) }
+    sleep 1
+    3.times { @led.on_for(0.25); @led.off_for(0.25) }
     sleep 1.5
     @led.off
   end

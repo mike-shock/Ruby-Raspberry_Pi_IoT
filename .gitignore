@@ -1,4 +1,15 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+Gemfile.lock
+
 doc.sh
 prepare.sh
 TODO.txt
+HISTORY.txt
 rubygems_cheat_sheet.txt
