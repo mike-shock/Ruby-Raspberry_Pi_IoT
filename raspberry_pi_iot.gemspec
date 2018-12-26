@@ -4,9 +4,9 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name        = "raspberry_pi_iot"
-  spec.version     = "0.0.9"
+  spec.version     = "0.0.10"
 #  spec.version       = RaspberryPiIoT::VERSION
-  spec.date        = "2018-12-20"
+  spec.date        = "2018-12-25"
   spec.authors     = ["Mike Shock (Mikhail V. Shokhirev)"]
   spec.email       = "mshock25@gmail.com"
   spec.summary     = "IoT library for Raspberry Pi projects in Ruby"
@@ -14,6 +14,8 @@ Gem::Specification.new do |spec|
   spec.license     = "MIT"
   spec.files       = Dir["lib/*"] + Dir["doc/*"] + Dir["test/*"]
   spec.homepage    = "https://github.com/mike-shock/Ruby-Raspberry_Pi_IoT/"
+
+  spec.required_ruby_version = '~> 2.0'
 
   spec.add_development_dependency "bundler",  "~> 1.17"
   spec.add_development_dependency "rake",     "~> 10.0"

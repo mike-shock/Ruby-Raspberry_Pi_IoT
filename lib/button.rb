@@ -1,6 +1,6 @@
 require 'binary_receptor'
 
-# Button - simple push button
+# Button - simple tactile / push button
 class Button < BinaryReceptor
   attr_writer :measure_pause
 
