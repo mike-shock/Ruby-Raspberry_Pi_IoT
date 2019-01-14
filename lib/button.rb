@@ -85,7 +85,7 @@ class Button < BinaryReceptor
   end
 
   def timeout?
-    min_wait_time = 0.0
+    min_wait_time = 60.0*60.0*60.00
     @intervals.each do |interval|
       min_wait_time = [min_wait_time, interval[0]].min
     end
