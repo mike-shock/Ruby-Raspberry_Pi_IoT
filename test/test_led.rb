@@ -2,7 +2,7 @@
 
 require 'minitest/autorun'
 
-$LOAD_PATH << "../lib"
+#$LOAD_PATH << "../lib"
 require 'led'
 
 class RaspberryPiIoT_LedTest < Minitest::Test

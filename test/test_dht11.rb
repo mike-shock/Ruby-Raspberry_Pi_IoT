@@ -2,7 +2,7 @@
 
 require 'minitest/autorun'
 
-$LOAD_PATH << "../lib"
+#$LOAD_PATH << "../lib"
 require "dht_sensor"
 
 class RaspberryPiIoT_DHT11Test < MiniTest::Test

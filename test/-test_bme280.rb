@@ -2,7 +2,7 @@
 
 require 'minitest/autorun'
 
-$LOAD_PATH << "../lib"
+#$LOAD_PATH << "../lib"
 require "bmx_sensor"
 
 class RaspberryPiIoT_BMP280Test < MiniTest::Test

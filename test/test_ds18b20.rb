@@ -2,7 +2,7 @@
 
 require 'minitest/autorun'
 
-$LOAD_PATH << "../lib"
+#$LOAD_PATH << "../lib"
 require "ds18b20"
 
 class RaspberryPiIoT_DS18B20Test < MiniTest::Test

@@ -2,7 +2,7 @@
 
 require 'minitest/autorun'
 
-$LOAD_PATH << "../lib"
+#$LOAD_PATH << "../lib"
 require "button"
 
 class RaspberryPiIoT_ButtonTest < MiniTest::Test

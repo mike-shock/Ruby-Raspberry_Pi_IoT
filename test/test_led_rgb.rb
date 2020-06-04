@@ -2,7 +2,7 @@
 
 require 'minitest/autorun'
 
-$LOAD_PATH << "../lib"
+#$LOAD_PATH << "../lib"
 require 'led_rgb'
 
 class RaspberryPiIoT_LedRgbTest < Minitest::Test
@@ -17,7 +17,7 @@ class RaspberryPiIoT_LedRgbTest < Minitest::Test
 
   def test_red
     @rgb.on :red
-    assert @rgb.on? :red
+    assert @rgb.on?(:red)
     sleep @time_on
     @rgb.off
     assert @rgb.off? :red

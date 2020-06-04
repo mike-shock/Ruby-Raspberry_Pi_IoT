@@ -2,7 +2,7 @@
 
 require 'minitest/autorun'
 
-$LOAD_PATH << "../lib"
+#$LOAD_PATH << "../lib"
 require 'max44009'
 
 class RaspberryPiIoT_MAX44009Test < MiniTest::Test

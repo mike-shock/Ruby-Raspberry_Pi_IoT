@@ -2,7 +2,7 @@
 
 require 'minitest/autorun'
 
-$LOAD_PATH << "../lib"
+#$LOAD_PATH << "../lib"
 require "thermal_sensor"
 
 class RaspberryPiIoT_ThermalSensorTest < MiniTest::Test

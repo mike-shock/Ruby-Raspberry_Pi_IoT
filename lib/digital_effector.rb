@@ -5,10 +5,8 @@ RPi::GPIO.set_numbering :bcm
 
 # DigitalEffector - effector/actuator with digitized control
 class DigitalEffector < Effector
-  @pin = nil
-  @pins = {} # GPIO pins
-
-  def initialize(pins, state=:low)
+  def initialize(pins={}, state=:low)
+    @pin = nil
     @states = {} # ON / Off states for pin numbers
     @pins = pins # DigitalEffector.new {red: 17, green: 28, blue: 22}
     @pins.each_value do |pin|
@@ -46,9 +44,9 @@ class DigitalEffector < Effector
 
 private
   def pin_number(pin)
-    if pin.class.name == 'Fixnum' # by number
+    if (pin.class.name == 'Integer') || (pin.class.name == 'Fixnum') # by number
       pin
-    elsif @pins[pin]              # by name
+    elsif @pins[pin]              # by name as Symbol
       @pins[pin]
     end
   end
@@ -59,5 +57,9 @@ private
 
   def low?(pin=@pin)
     RPi::GPIO.low? pin
+  end
+
+  def state
+   [@pins, @states]
   end
 end
