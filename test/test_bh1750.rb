@@ -2,7 +2,7 @@
 
 require 'minitest/autorun'
 
-$LOAD_PATH << "../lib"
+#$LOAD_PATH << "../lib"
 require 'bh1750'
 
 class RaspberryPiIoT_BH1750Test < MiniTest::Test
@@ -15,7 +15,7 @@ class RaspberryPiIoT_BH1750Test < MiniTest::Test
   end
 
   def test_i2c_bus
-    assert File.exists?(Bus::I2C.bus)
+    assert File.exist?(Bus::I2C.bus)
   end
 
   def test_device_address

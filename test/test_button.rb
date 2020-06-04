@@ -42,7 +42,7 @@ class RaspberryPiIoT_ButtonTest < MiniTest::Test
   end
 
   def test_wait_for_double_press
-    printf "Waiting for double press (2 sequential short presses)...\n", p
+    printf "Waiting for double press (2 sequential short presses)...\n"
     @button.wait_for_presses 2
     unless @button.timeout?
       assert @button.double_press?

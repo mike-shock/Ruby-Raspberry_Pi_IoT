@@ -4,9 +4,10 @@ $LOAD_PATH << "../lib"
 require "bmx_sensor"
 
 sensor = BME280.new
+printf "=== %s DEMO ===\n", sensor.name
 printf "%s\n", sensor.to_s
 
-while true do
+12.times do
   sensor.read_data
   printf "T: %7.4f°C ", sensor.celsius
   printf "H: %7.4f %% ", sensor.humidity

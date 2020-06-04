@@ -4,6 +4,7 @@ $LOAD_PATH << "../lib"
 require "button"
 
 button = Button.new(21)
+printf "=== %s DEMO ===\n", 'Push Button'
 
 printf "Waiting for press...\n", p
 s = button.wait_for_press

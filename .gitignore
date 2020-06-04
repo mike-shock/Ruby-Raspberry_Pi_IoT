@@ -9,6 +9,7 @@
 Gemfile.lock
 
 doc.sh
+pre-install.sh
 prepare.sh
 TODO.txt
 HISTORY.txt

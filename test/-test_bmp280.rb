@@ -3,24 +3,16 @@
 require 'minitest/autorun'
 
 $LOAD_PATH << "../lib"
-require 'bmx_sensor'
+require "bmx_sensor"
 
 class RaspberryPiIoT_BMP280Test < MiniTest::Test
 
   def setup
-    @bus = 1
-    @address = 0x76
-    @addr_s  = sprintf("%02x", @address)
     @sensor = BMP280.new
   end
 
-  def test_device_address
-    i2cd = `i2cdetect -y #{@bus}`
-    hex = i2cd.scan(/ (#{@addr_s})/).flatten
-    assert hex.size == 1 && hex[0] == @addr_s
-  end
-
-  def test_temperature
+  def test_temperature_value
+    @sensor.read_data
     c = @sensor.celsius
     assert c > 15.0
 
@@ -34,20 +26,29 @@ class RaspberryPiIoT_BMP280Test < MiniTest::Test
     assert k > f
   end
 
-  def test_pressure
+  def test_pressure_value
+    @sensor.read_data 
+    # T: 27.2782°C P: 757.3502 mmHg 1009.7172 hPa 100971.7158 Pa 0.99651 atm 1.00972 bar 0.00131 Torr 
     m = @sensor.pressure(:mmHg)
-    assert m > 650.0
+    assert m > 750.0
+
+    h = @sensor.pressure(:hPa)
+    assert h > m
+
+    k = @sensor.pressure(:kPa)
+    assert k == h / 10.0
 
     p = @sensor.pressure(:Pa)
-    assert p > m
+    assert p > k
 
     a = @sensor.pressure(:atm)
-    assert a == p / 101325.0
+    assert a < m
 
     b = @sensor.pressure(:bar)
-    assert b == p / 100000.0
+    assert b > a
 
     t = @sensor.pressure(:Torr)
-    assert t == a / 760.0
+    assert t < b
   end
 end
+

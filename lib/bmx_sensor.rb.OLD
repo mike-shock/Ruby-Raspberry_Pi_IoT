@@ -1,20 +1,25 @@
-require 'i2c/bme280'
-require 'humiture_sensor'
+# OLD implementation with 'i2c-devices.gem'
+gem 'i2c'
+require 'i2c'
+require 'i2c/driver/i2c-dev'
+gem 'i2c-devices'
+require 'i2c/device/bme280'
+require 'bus'
 
 # BMP/BME humidity, temperature & atmospheric pressure sensor family
 class BMxSensor < HumitureSensor
 
-  def initialize(sensor_name='BMx280', bus=1)
+  def initialize(sensor_name)
     @sensor_name = sensor_name
-    @sensor = I2C::Driver::BME280.new(device: bus)
+    @sensor = I2CDevice::Bme280.new
     @temperature, @humidity, @pressure = read_data
   end
 
   def read_data
-    data = @sensor.all
-    @temperature = data[:t]
-    @pressure = data[:p]
-    @humidity = data[:h]
+    data = @sensor.calc_sensor_data
+    @temperature = data[:temp]
+    @pressure = data[:pressure]
+    @humidity = data[:hum]
     [@temperature, @humidity, @pressure]
   end
 
@@ -53,6 +58,7 @@ class BMxSensor < HumitureSensor
   def to_s
     sprintf "%5.2f°C, %5.2f %%, %5.2f mmHg", @temperature, @humidity, pressure(:mmHg)
   end
+
 end
 
 class BMP280 < BMxSensor # combined atmospheric pressure & temperature sensor
@@ -66,8 +72,3 @@ class BME280 < BMxSensor # combined atmospheric pressure, temperature & humidity
     super('BME280')
   end
 end
-
-require 'i2c/bme280'
-
-bme280 = BMxSensor.new
-puts "Temperature: #{'%7.2f' % bme280.temperature}°C"

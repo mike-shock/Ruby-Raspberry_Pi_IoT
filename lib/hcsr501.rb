@@ -1,4 +1,4 @@
-require 'binary_receptor'
+require 'binary_sensor'
 
 # HCSR501 - PIR sensor
 class HCSR501 < BinarySensor

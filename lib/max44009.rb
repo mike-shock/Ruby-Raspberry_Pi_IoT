@@ -44,6 +44,10 @@ class MAX44009
     @value = read_sensor
   end
 
+  def name
+    @sensor_name
+  end
+
   def write_config()
     # Select the configuration register data from the given provided values
     config = (MAX44009_REG_CONFIG_CONTMODE_CONTIN | MAX44009_REG_CONFIG_MANUAL_MODEON | MAX44009_REG_CONFIG_CDR_NODIVIDED | MAX44009_REG_CONFIG_INTRTIMER_800)
@@ -68,6 +72,7 @@ private
     exponent = (data[0].ord & 0xF0) >> 4
     mantissa = ((data[0].ord & 0x0F) << 4) | (data[1].ord & 0x0F)
     luminance = ((2 ** exponent) * mantissa) * 0.045
+    luminance
   end
 
   # convert sensor data to a float number

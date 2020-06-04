@@ -4,6 +4,7 @@ $LOAD_PATH << "../lib"
 require 'bmx_sensor'
 
 sensor = BMP280.new
+printf "=== %s DEMO ===\n", sensor.name
 printf "%s\n", sensor.to_s
 
 12.times do |n|

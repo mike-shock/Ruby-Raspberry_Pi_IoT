@@ -15,7 +15,7 @@ class RaspberryPiIoT_MAX44009Test < MiniTest::Test
   end
 
   def test_i2c_bus
-    assert File.exists?(Bus::I2C.bus)
+    assert File.exist?(Bus::I2C.bus)
   end
 
   def test_device_address

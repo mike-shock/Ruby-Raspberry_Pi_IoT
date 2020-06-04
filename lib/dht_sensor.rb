@@ -11,6 +11,10 @@ class DHTxxSensor < HumitureSensor
     @temperature, @humidity = read_data
   end
 
+  def name
+    @sensor_name
+  end
+
   # Read values by 'DhtSensor.read' from 'dht-sensor-ffi'
   def read_data
     sensor_data = DhtSensor.read(@pin, @sensor_model)

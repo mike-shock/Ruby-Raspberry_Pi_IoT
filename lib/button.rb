@@ -5,7 +5,7 @@ class Button < BinaryReceptor
   attr_writer :measure_pause
 
   def initialize(pin)
-    receptor_name = 'BUTTON'
+    @receptor_name = 'BUTTON'
     super(pin)
     @measure_pause = 0.01
     @long_click = 1.0
@@ -15,6 +15,10 @@ class Button < BinaryReceptor
     # samples:        wait time    press time     wait time    press time
     # double press: [[1.486804292, 0.090814152], [0.131284967, 0.13125429]]
     # long press:   [[0.910878286, 1.109352219]]
+  end
+
+  def name
+    @receptor_name
   end
 
   # Is button being pressed?

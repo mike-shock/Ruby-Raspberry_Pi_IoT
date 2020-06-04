@@ -4,14 +4,13 @@ $LOAD_PATH << "../lib"
 require "led_rgb"
 
 rgb = LED::RGB.new(17, 27, 22)
-
 printf "=== %s DEMO ===\n", rgb.name
 
-rgb.red_on
+rgb.on :red
 sleep 0.25
-rgb.green_on
+rgb.on :green
 sleep 0.25
-rgb.blue_on
+rgb.on :blue
 sleep 0.25
 sleep 2
 rgb.off :all

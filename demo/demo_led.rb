@@ -4,7 +4,6 @@ $LOAD_PATH << "../lib"
 require "led"
 
 led = LED.new(18)
-
 printf "=== %s DEMO ===\n", led.name
 
   led.on

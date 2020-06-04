@@ -3,13 +3,14 @@
 $LOAD_PATH << "../lib"
 require "hcsr501"
 
-pir = HCSR501.new(17)
+sensor = HCSR501.new(17)
+printf "=== %s DEMO ===\n", sensor.name
 
-t = 100
+t = 5
 printf "Testing %d times...\n", t
 
 t.times do |n|
-  value = pir.high?
+  value = sensor.high?
   if value
     printf "%d HIGH!!!\n", n
   else

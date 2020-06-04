@@ -13,7 +13,7 @@ class RaspberryPiIoT_LedTest < Minitest::Test
     @led.off
   end
 
-  def test_on
+  def test_on_off
     @led.on
     assert @led.on?
     assert !@led.off?
@@ -21,7 +21,7 @@ class RaspberryPiIoT_LedTest < Minitest::Test
     @led.off
   end
 
-  def test_on
+  def test_off_on
     @led.off
     assert @led.off?
     assert !@led.on?

@@ -38,6 +38,10 @@ class BH1750
     @value
   end
 
+  def name
+    @sensor_name
+  end
+
 private
   # Convert 2 bytes of sensor data to a float number
   def to_f(data)

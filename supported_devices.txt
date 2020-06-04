@@ -2,11 +2,11 @@ Tested:
 + BH1750		Receptor	I2C		Luminocity sensor
 + BME280		Receptor	I2C		Temperature, humidity & pressure sensor
 + BMP280		Receptor	I2C		Temperature & pressure sensor: 20-bit
-+ DHT11			Receptor	special		Temperature & humidity sensor
-+ DHT22			Receptor	special		Temperature & humidity sensor
++ DHT11			Receptor	special		Temperature & humidity sensor: integer values
++ DHT22			Receptor	special		Temperature & humidity sensor: more precise fractional values
 + DS18B20		Receptor	1-wire		Temperature sensor: high precision
 + MAX44009/GY49		Receptor	I2C		Luminocity sensor
-+ Thermal_Sensor	Receptor	internal	Temperature sensor
++ Thermal_Sensor	Receptor	internal	Temperature sensor on Raspberry Pi board
 
 + LED			Effector	1-pin		Light
 + LED_RGB		Effector	3-pin		Light
@@ -16,7 +16,7 @@ Tested:
   WS2812 LED Matrix	Effector	1-pin		Light
 
 To add:
-- SenseHAT		R+E		HAT		LEDs + T,H,P sensor + hyroscope + Joystick
+- SenseHAT		R+E		HAT		LED matrix + T,H,P sensor + hyroscope + Joystick
 
 
 Not implemented:

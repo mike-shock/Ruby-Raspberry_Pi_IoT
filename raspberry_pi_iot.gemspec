@@ -4,13 +4,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name        = "raspberry_pi_iot"
-  spec.version     = "0.0.10"
-#  spec.version       = RaspberryPiIoT::VERSION
-  spec.date        = "2018-12-25"
+  spec.version     = "0.0.11"
+  spec.date        = "2020-06-03"
   spec.authors     = ["Mike Shock (Mikhail V. Shokhirev)"]
   spec.email       = "mshock25@gmail.com"
   spec.summary     = "IoT library for Raspberry Pi projects in Ruby"
-  spec.description = "A set of classes for IoT (Inrternet of Things) / physical computing with Raspberry Pi"
+  spec.description = "A set of classes for IoT (Internet of Things) / physical computing with Raspberry Pi"
   spec.license     = "MIT"
   spec.files       = Dir["lib/*"] + Dir["doc/*"] + Dir["test/*"]
   spec.homepage    = "https://github.com/mike-shock/Ruby-Raspberry_Pi_IoT/"
@@ -34,6 +33,6 @@ Gem::Specification.new do |spec|
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org"
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = spec.homepage
+#  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
 end

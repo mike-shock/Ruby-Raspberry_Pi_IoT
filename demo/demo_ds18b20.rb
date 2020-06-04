@@ -4,7 +4,6 @@ $LOAD_PATH << "../lib"
 require "ds18b20"
 
 sensor = DS18B20.new
-
 printf "=== %s DEMO ===\n", sensor.name
 
 10.times do
