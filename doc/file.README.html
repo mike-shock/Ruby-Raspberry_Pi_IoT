@@ -6,7 +6,7 @@
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -57,75 +57,78 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'>
-<h1 id="label-Raspberry_Pi_IoT">Raspberry_Pi_IoT</h1>
+      <div id="content"><div id='filecontents'><h1 id="raspberrypiiot">Raspberry_Pi_IoT</h1>
 
 <p>A Ruby library for IoT (physical computing) projects with Raspberry Pi.</p>
 
-<h2 id="label-Why+I+made+it.">Why I made it.</h2>
+<h2 id="why-i-made-it">Why I made it.</h2>
 
-<p>I&#39;m a software developer and a maker. And I do love Raspberry Pi -
-it&#39;s such a fun to do physical programming! But I love to program in
-Ruby. So I tried to make a pragmatic set of useful IoT libraries for the
-Ruby language for all who want to program for Raspberry Pi in Ruby.</p>
+<p>I’m a software developer and a maker. And I do love Raspberry Pi - 
+it’s such a fun to do physical programming! But I love to program in Ruby. 
+So I tried to make a pragmatic set of useful IoT libraries for the Ruby language 
+for all who want to program for Raspberry Pi in Ruby.</p>
 
-<h2 id="label-Installation">Installation</h2>
+<h2 id="installation">Installation</h2>
 
 <p>To use this library you should do:</p>
-<ol><li>
-<p>Install the Ruby development version (to compile the extensions):</p>
-</li></ol>
 
-<p>sudo apt-get install ruby-dev</p>
-<ol><li>
-<p>Download and install the bcm2835-1.xx.tar.gz library:</p>
-</li></ol>
+<ol>
+  <li>
+    <p>Install the Ruby development version (to compile the extensions):</p>
 
-<p>wget <a
-href="http://www.airspayce.com/mikem/bcm2835/bcm2835-1.58.tar.gz">www.airspayce.com/mikem/bcm2835/bcm2835-1.58.tar.gz</a></p>
+    <p>sudo apt-get install ruby-dev</p>
+  </li>
+  <li>
+    <p>Download and install the bcm2835-1.xx.tar.gz library:</p>
 
-<p>tar zxvf bcm2835-1.xx.tar.gz</p>
+    <p>wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.58.tar.gz</p>
 
-<p>cd bcm2835-1.xx</p>
+    <p>tar zxvf bcm2835-1.xx.tar.gz</p>
 
-<p>./configure</p>
+    <p>cd bcm2835-1.xx</p>
 
-<p>make</p>
+    <p>./configure</p>
 
-<p>sudo make check</p>
+    <p>make</p>
 
-<p>sudo make install</p>
-<ol><li>
-<p>Install the latest version of gem:</p>
-</li></ol>
+    <p>sudo make check</p>
 
-<p>gem install raspberry_pi_iot.gem</p>
+    <p>sudo make install</p>
+  </li>
+  <li>
+    <p>Install the latest version of gem:</p>
 
-<h2 id="label-Plans-3A">Plans:</h2>
-<ul><li>
-<p>Support for more devices (I2C, SPI, LED strip &amp; matrix), SenseHAT,
-Official Display (brightness, orientation).</p>
-</li><li>
-<p>Better functionality for existing classes (Button, etc.)</p>
-</li><li>
-<p>More tests.</p>
-</li></ul>
+    <p>gem install raspberry_pi_iot.gem</p>
+  </li>
+</ol>
 
-<h2 id="label-Contributing">Contributing</h2>
+<h2 id="plans">Plans:</h2>
 
-<p>Bug reports are welcome on GitHub at <a
-href="https://github.com/mike-shock/Ruby-Raspberry_Pi_IoT">github.com/mike-shock/Ruby-Raspberry_Pi_IoT</a>.</p>
+<ul>
+  <li>
+    <p>Support for more devices (I2C, SPI, LED strip &amp; matrix), SenseHAT, Official Display (brightness, orientation).</p>
+  </li>
+  <li>
+    <p>Better functionality for existing classes (Button, etc.)</p>
+  </li>
+  <li>
+    <p>More tests.</p>
+  </li>
+</ul>
 
-<h2 id="label-License">License</h2>
+<h2 id="contributing">Contributing</h2>
 
-<p>The gem is available as open source under the terms of the <a
-href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
+<p>Bug reports are welcome on GitHub at https://github.com/mike-shock/Ruby-Raspberry_Pi_IoT.</p>
+
+<h2 id="license">License</h2>
+
+<p>The gem is available as open source under the terms of the [MIT License] (https://opensource.org/licenses/MIT).</p>
 </div></div>
 
       <div id="footer">
-  Generated on Wed Dec 26 18:10:00 2018 by
+  Generated on Mon Jun  8 16:36:36 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.3.3).
+  0.9.20 (ruby-2.5.5).
 </div>
 
     </div>

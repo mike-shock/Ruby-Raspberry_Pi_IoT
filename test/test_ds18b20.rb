@@ -2,13 +2,14 @@
 
 require 'minitest/autorun'
 
-#$LOAD_PATH << "../lib"
-require "ds18b20"
+$LOAD_PATH << "../lib" unless ARGV[0] == "gem"
+require "iot"
+require "iot/ds18b20"
 
 class RaspberryPiIoT_DS18B20Test < MiniTest::Test
 
   def setup
-    @sensor = DS18B20.new
+    @sensor = IoT::DS18B20.new
   end
 
   def test_sensor_value

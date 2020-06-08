@@ -1,9 +1,9 @@
 #!/usr/bin/ruby
 
-$LOAD_PATH << "../lib"
-require "led"
+$LOAD_PATH << "../lib" unless ARGV[0] == "gem"
+require 'iot/led'
 
-led = LED.new(18)
+led = IoT::LED.new(18)
 printf "=== %s DEMO ===\n", led.name
 
   led.on

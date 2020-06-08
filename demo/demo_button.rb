@@ -1,9 +1,9 @@
 #!/usr/bin/ruby
 
-$LOAD_PATH << "../lib"
-require "button"
+$LOAD_PATH << "../lib" unless ARGV[0] == "gem"
+require "iot/button"
 
-button = Button.new(21)
+button = IoT::Button.new(21)
 printf "=== %s DEMO ===\n", 'Push Button'
 
 printf "Waiting for press...\n", p
@@ -21,9 +21,9 @@ printf "Testing %d times...\n", t
 t.times do |n|
   value = button.pressed?
   if value
-    printf "%d Button PRESSED!!!\n", n
+    printf "%02d Button PRESSED!!! Release it...\n", n
   else
-    printf "%d Button not pressed!\n", n
+    printf "%02d Button not pressed. Press it...\n", n
   end
   sleep 0.5
 end

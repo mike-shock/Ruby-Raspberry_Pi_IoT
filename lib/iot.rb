@@ -1,9 +1,11 @@
+require_relative 'iot/receptor'
+require_relative 'iot/effector'
+
 # IoT - Internet of Things classes and modules
 module IoT
-
   # Logging events and  actions
   class Log
-    @file_name = nil
+    attr_accessor :file_name
 
     def initialize(file_name='/tmp/iot.log')
       @file_name = file_name

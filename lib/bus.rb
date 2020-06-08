@@ -1,5 +1,3 @@
-
-#$LOAD_PATH << '~/lib/ruby-i2c-devices/lib'
 gem 'i2c-devices'
 require 'i2c'
 require 'i2c/driver/i2c-dev'

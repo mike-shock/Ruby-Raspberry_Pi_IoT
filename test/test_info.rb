@@ -2,8 +2,7 @@
 
 require 'minitest/autorun'
 
-#$LOAD_PATH << "../lib"
-require 'iot'
+$LOAD_PATH << "../lib" unless ARGV[0] == "gem"
 require 'raspberry_pi'
 
 class RaspberryPiIoT_InfoTest < Minitest::Test

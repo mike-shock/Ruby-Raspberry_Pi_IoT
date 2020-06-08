@@ -10,7 +10,8 @@ Gemfile.lock
 
 doc.sh
 pre-install.sh
-prepare.sh
 TODO.txt
 HISTORY.txt
 rubygems_cheat_sheet.txt
+version_prepare.sh
+version_ship.sh

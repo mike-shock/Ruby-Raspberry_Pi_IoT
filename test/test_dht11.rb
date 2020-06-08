@@ -2,14 +2,14 @@
 
 require 'minitest/autorun'
 
-#$LOAD_PATH << "../lib"
-require "dht_sensor"
+$LOAD_PATH << "../lib" unless ARGV[0] == "gem"
+require "iot/dht_sensor"
 
 class RaspberryPiIoT_DHT11Test < MiniTest::Test
 
   def setup
     @pin = 23
-    @sensor = DHT11.new(@pin)
+    @sensor = IoT::DHT11.new(@pin)
   end
 
   def test_temperature

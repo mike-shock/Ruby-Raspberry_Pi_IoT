@@ -1,14 +1,16 @@
 #!/usr/bin/env ruby
 
-$LOAD_PATH << "../lib"
-require 'bmx_sensor'
+$LOAD_PATH << "../lib" unless ARGV[0] == "gem"
+require 'iot/bmx_sensor'
 
-sensor = BMP280.new
+sensor = IoT::BMP280.new
 printf "=== %s DEMO ===\n", sensor.name
 printf "%s\n", sensor.to_s
 
-12.times do |n|
+t = 6
+t.times do |n|
   sensor.read_data
+  printf "%02d ", n
   printf "%02d T: %7.4f°C ", n, sensor.celsius
   printf "P: %7.4f mmHg ", sensor.pressure(:mmHg)
   printf "%7.4f hPa ",  sensor.pressure(:hPa)

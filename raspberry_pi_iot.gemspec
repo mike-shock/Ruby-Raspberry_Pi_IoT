@@ -1,17 +1,18 @@
 #require "Raspberry_Pi_IoT/version"
 lib = File.expand_path("./lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require_relative 'lib/raspberry_pi_iot'
 
 Gem::Specification.new do |spec|
   spec.name        = "raspberry_pi_iot"
-  spec.version     = "0.0.11"
-  spec.date        = "2020-06-03"
+  spec.version     = RaspberryPiIoT::VERSION
+  spec.date        = "2020-06-04"
   spec.authors     = ["Mike Shock (Mikhail V. Shokhirev)"]
   spec.email       = "mshock25@gmail.com"
   spec.summary     = "IoT library for Raspberry Pi projects in Ruby"
   spec.description = "A set of classes for IoT (Internet of Things) / physical computing with Raspberry Pi"
   spec.license     = "MIT"
-  spec.files       = Dir["lib/*"] + Dir["doc/*"] + Dir["test/*"]
+  spec.files       = Dir["lib/**/*"] + Dir["doc/*"] + Dir["test/*"]
   spec.homepage    = "https://github.com/mike-shock/Ruby-Raspberry_Pi_IoT/"
 
   spec.required_ruby_version = '~> 2.0'

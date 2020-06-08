@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION=0.0.9
+VERSION=`ruby -I./lib -e "require 'raspberry_pi_iot'; print RaspberryPiIoT::VERSION"`
 ./doc.sh
 
 gem build raspberry_pi_iot.gemspec
@@ -8,7 +8,7 @@ sudo gem install raspberry_pi_iot
 
 git add .
 git status
-git commit -m "Some bugs fixed."
+git commit -m "Classes are put into IoT module. Bugs in BMxSensor class fixed."
 git tag v$VERSION
 git push
 git push --tags

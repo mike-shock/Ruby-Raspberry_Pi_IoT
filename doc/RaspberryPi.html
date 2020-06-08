@@ -6,7 +6,7 @@
 <title>
   Module: RaspberryPi
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.20
   
 </title>
 
@@ -279,8 +279,6 @@ href="https://www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board
       <pre class="lines">
 
 
-45
-46
 47
 48
 49
@@ -296,10 +294,12 @@ href="https://www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board
 59
 60
 61
-62</pre>
+62
+63
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/raspberry_pi.rb', line 45</span>
+      <pre class="code"><span class="info file"># File 'lib/raspberry_pi.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_disk_space'>disk_space</span><span class='lparen'>(</span><span class='id identifier rubyid_mounted'>mounted</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_hash'>hash</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_disk_memory'>disk_memory</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -350,8 +350,6 @@ href="https://www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board
       <pre class="lines">
 
 
-17
-18
 19
 20
 21
@@ -365,10 +363,12 @@ href="https://www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board
 29
 30
 31
-32</pre>
+32
+33
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/raspberry_pi.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'lib/raspberry_pi.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_hardware_info'>hardware_info</span>
   <span class='id identifier rubyid_info'>info</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -417,12 +417,12 @@ href="https://www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board
       <pre class="lines">
 
 
-40
-41
-42</pre>
+42
+43
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/raspberry_pi.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'lib/raspberry_pi.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_host_ip'>host_ip</span>
   <span class='backtick'>`</span><span class='tstring_content'>hostname -I</span><span class='tstring_end'>`</span></span><span class='period'>.</span><span class='id identifier rubyid_chomp'>chomp</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span>
@@ -458,12 +458,12 @@ href="https://www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board
       <pre class="lines">
 
 
-35
-36
-37</pre>
+37
+38
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/raspberry_pi.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'lib/raspberry_pi.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_host_name'>host_name</span>
   <span class='backtick'>`</span><span class='tstring_content'>hostname</span><span class='tstring_end'>`</span></span><span class='period'>.</span><span class='id identifier rubyid_chomp'>chomp</span>
@@ -500,8 +500,6 @@ href="https://www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board
       <pre class="lines">
 
 
-5
-6
 7
 8
 9
@@ -509,10 +507,12 @@ href="https://www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board
 11
 12
 13
-14</pre>
+14
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/raspberry_pi.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'lib/raspberry_pi.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_model_name'>model_name</span><span class='lparen'>(</span><span class='id identifier rubyid_source'>source</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>proc</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_info'>info</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_source'>source</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>proc</span><span class='tstring_end'>&#39;</span></span>
@@ -534,9 +534,9 @@ href="https://www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board
 </div>
 
       <div id="footer">
-  Generated on Wed Dec 26 18:10:00 2018 by
+  Generated on Mon Jun  8 16:36:37 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.3.3).
+  0.9.20 (ruby-2.5.5).
 </div>
 
     </div>

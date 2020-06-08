@@ -1,3 +1,5 @@
+require_relative 'iot'
+
 module RaspberryPi
 
   # Return the model name

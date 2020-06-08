@@ -1,8 +1,7 @@
 #!/usr/bin/ruby
 
-$LOAD_PATH << "../lib"
-require "iot"
-require "raspberry_pi"
+$LOAD_PATH << "../lib" unless ARGV[0] == "gem"
+require 'raspberry_pi'
 
 printf "=== %s DEMO ===\n", 'Info'
 printf "Model: %s\n", RaspberryPi.model_name()

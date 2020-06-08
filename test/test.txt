@@ -1,0 +1,290 @@
+=== test_bh1750.rb ===============================================
+Run options: --seed 12388
+
+# Running:
+
+...
+
+Finished in 0.026289s, 114.1150 runs/s, 114.1150 assertions/s.
+
+3 runs, 3 assertions, 0 failures, 0 errors, 0 skips
+-----------------------------------------------------------------
+=== test_bme280.rb ===============================================
+Run options: --seed 6580
+
+# Running:
+
+EEF
+
+Finished in 0.026644s, 112.5958 runs/s, 37.5319 assertions/s.
+
+  1) Error:
+RaspberryPiIoT_BMP280Test#test_temperature_value:
+NoMethodError: undefined method `unpack' for nil:NilClass
+    /var/lib/gems/2.5.0/gems/i2c-bme280-0.1.2/lib/i2c/bme280.rb:113:in `data'
+    /var/lib/gems/2.5.0/gems/i2c-bme280-0.1.2/lib/i2c/bme280.rb:30:in `all'
+    /var/lib/gems/2.5.0/gems/raspberry_pi_iot-0.0.12/lib/iot/bmx_sensor.rb:18:in `read_data'
+    /var/lib/gems/2.5.0/gems/raspberry_pi_iot-0.0.12/lib/iot/bmx_sensor.rb:14:in `initialize'
+    /var/lib/gems/2.5.0/gems/raspberry_pi_iot-0.0.12/lib/iot/bmx_sensor.rb:70:in `initialize'
+    ./test_bme280.rb:11:in `new'
+    ./test_bme280.rb:11:in `setup'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:96:in `block (3 levels) in run'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:195:in `capture_exceptions'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:95:in `block (2 levels) in run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:265:in `time_it'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:94:in `block in run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:360:in `on_signal'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:211:in `with_info_handler'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:93:in `run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:960:in `run_one_method'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:334:in `run_one_method'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:321:in `block (2 levels) in run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:320:in `each'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:320:in `block in run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:360:in `on_signal'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:347:in `with_info_handler'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:319:in `run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:159:in `block in __run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:159:in `map'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:159:in `__run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:136:in `run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:63:in `block in autorun'
+
+  2) Error:
+RaspberryPiIoT_BMP280Test#test_pressure_value:
+NoMethodError: undefined method `unpack' for nil:NilClass
+    /var/lib/gems/2.5.0/gems/i2c-bme280-0.1.2/lib/i2c/bme280.rb:113:in `data'
+    /var/lib/gems/2.5.0/gems/i2c-bme280-0.1.2/lib/i2c/bme280.rb:30:in `all'
+    /var/lib/gems/2.5.0/gems/raspberry_pi_iot-0.0.12/lib/iot/bmx_sensor.rb:18:in `read_data'
+    /var/lib/gems/2.5.0/gems/raspberry_pi_iot-0.0.12/lib/iot/bmx_sensor.rb:14:in `initialize'
+    /var/lib/gems/2.5.0/gems/raspberry_pi_iot-0.0.12/lib/iot/bmx_sensor.rb:70:in `initialize'
+    ./test_bme280.rb:11:in `new'
+    ./test_bme280.rb:11:in `setup'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:96:in `block (3 levels) in run'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:195:in `capture_exceptions'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:95:in `block (2 levels) in run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:265:in `time_it'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:94:in `block in run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:360:in `on_signal'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:211:in `with_info_handler'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:93:in `run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:960:in `run_one_method'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:334:in `run_one_method'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:321:in `block (2 levels) in run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:320:in `each'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:320:in `block in run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:360:in `on_signal'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:347:in `with_info_handler'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:319:in `run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:159:in `block in __run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:159:in `map'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:159:in `__run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:136:in `run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:63:in `block in autorun'
+
+  3) Failure:
+RaspberryPiIoT_BMP280Test#test_humidity_value [./test_bme280.rb:55]:
+Expected false to be truthy.
+
+3 runs, 1 assertions, 1 failures, 2 errors, 0 skips
+-----------------------------------------------------------------
+=== test_bmp280.rb ===============================================
+Run options: --seed 40885
+
+# Running:
+
+EE
+
+Finished in 0.016186s, 123.5606 runs/s, 0.0000 assertions/s.
+
+  1) Error:
+RaspberryPiIoT_BMP280Test#test_temperature_value:
+NoMethodError: undefined method `unpack' for nil:NilClass
+    /var/lib/gems/2.5.0/gems/i2c-bme280-0.1.2/lib/i2c/bme280.rb:113:in `data'
+    /var/lib/gems/2.5.0/gems/i2c-bme280-0.1.2/lib/i2c/bme280.rb:30:in `all'
+    /var/lib/gems/2.5.0/gems/raspberry_pi_iot-0.0.12/lib/iot/bmx_sensor.rb:18:in `read_data'
+    /var/lib/gems/2.5.0/gems/raspberry_pi_iot-0.0.12/lib/iot/bmx_sensor.rb:14:in `initialize'
+    /var/lib/gems/2.5.0/gems/raspberry_pi_iot-0.0.12/lib/iot/bmx_sensor.rb:64:in `initialize'
+    ./test_bmp280.rb:11:in `new'
+    ./test_bmp280.rb:11:in `setup'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:96:in `block (3 levels) in run'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:195:in `capture_exceptions'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:95:in `block (2 levels) in run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:265:in `time_it'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:94:in `block in run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:360:in `on_signal'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:211:in `with_info_handler'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:93:in `run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:960:in `run_one_method'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:334:in `run_one_method'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:321:in `block (2 levels) in run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:320:in `each'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:320:in `block in run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:360:in `on_signal'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:347:in `with_info_handler'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:319:in `run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:159:in `block in __run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:159:in `map'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:159:in `__run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:136:in `run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:63:in `block in autorun'
+
+  2) Error:
+RaspberryPiIoT_BMP280Test#test_pressure_value:
+NoMethodError: undefined method `unpack' for nil:NilClass
+    /var/lib/gems/2.5.0/gems/i2c-bme280-0.1.2/lib/i2c/bme280.rb:113:in `data'
+    /var/lib/gems/2.5.0/gems/i2c-bme280-0.1.2/lib/i2c/bme280.rb:30:in `all'
+    /var/lib/gems/2.5.0/gems/raspberry_pi_iot-0.0.12/lib/iot/bmx_sensor.rb:18:in `read_data'
+    /var/lib/gems/2.5.0/gems/raspberry_pi_iot-0.0.12/lib/iot/bmx_sensor.rb:14:in `initialize'
+    /var/lib/gems/2.5.0/gems/raspberry_pi_iot-0.0.12/lib/iot/bmx_sensor.rb:64:in `initialize'
+    ./test_bmp280.rb:11:in `new'
+    ./test_bmp280.rb:11:in `setup'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:96:in `block (3 levels) in run'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:195:in `capture_exceptions'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:95:in `block (2 levels) in run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:265:in `time_it'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:94:in `block in run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:360:in `on_signal'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:211:in `with_info_handler'
+    /usr/lib/ruby/vendor_ruby/minitest/test.rb:93:in `run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:960:in `run_one_method'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:334:in `run_one_method'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:321:in `block (2 levels) in run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:320:in `each'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:320:in `block in run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:360:in `on_signal'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:347:in `with_info_handler'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:319:in `run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:159:in `block in __run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:159:in `map'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:159:in `__run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:136:in `run'
+    /usr/lib/ruby/vendor_ruby/minitest.rb:63:in `block in autorun'
+
+2 runs, 0 assertions, 0 failures, 2 errors, 0 skips
+-----------------------------------------------------------------
+=== test_button.rb ===============================================
+Run options: --seed 44312
+
+# Running:
+
+Waiting for 1 long press (> 1 second)...
+.Waiting for 1 short press (< 1 second)...
+.Waiting for double press (2 sequential short presses)...
+.Waiting for a press...
+.
+
+Finished in 60.033253s, 0.0666 runs/s, 0.0333 assertions/s.
+
+4 runs, 2 assertions, 0 failures, 0 errors, 0 skips
+-----------------------------------------------------------------
+=== test_dht11.rb ===============================================
+Run options: --seed 31229
+
+# Running:
+
+..
+
+Finished in 0.953396s, 2.0978 runs/s, 5.2444 assertions/s.
+
+2 runs, 5 assertions, 0 failures, 0 errors, 0 skips
+-----------------------------------------------------------------
+=== test_dht22.rb ===============================================
+Run options: --seed 39084
+
+# Running:
+
+..
+
+Finished in 1.477398s, 1.3537 runs/s, 3.3843 assertions/s.
+
+2 runs, 5 assertions, 0 failures, 0 errors, 0 skips
+-----------------------------------------------------------------
+=== test_ds18b20.rb ===============================================
+Run options: --seed 10331
+
+# Running:
+
+.
+
+Finished in 0.925761s, 1.0802 runs/s, 4.3208 assertions/s.
+
+1 runs, 4 assertions, 0 failures, 0 errors, 0 skips
+-----------------------------------------------------------------
+=== test_helper.rb ===============================================
+Run options: --seed 14803
+
+# Running:
+
+
+
+Finished in 0.001802s, 0.0000 runs/s, 0.0000 assertions/s.
+
+0 runs, 0 assertions, 0 failures, 0 errors, 0 skips
+-----------------------------------------------------------------
+=== test_info.rb ===============================================
+Run options: --seed 56370
+
+# Running:
+
+.....
+
+Finished in 1.410895s, 3.5439 runs/s, 8.5052 assertions/s.
+
+5 runs, 12 assertions, 0 failures, 0 errors, 0 skips
+-----------------------------------------------------------------
+=== test_led.rb ===============================================
+Run options: --seed 14482
+
+# Running:
+
+....
+
+Finished in 12.511368s, 0.3197 runs/s, 0.3197 assertions/s.
+
+4 runs, 4 assertions, 0 failures, 0 errors, 0 skips
+-----------------------------------------------------------------
+=== test_led_rgb.rb ===============================================
+Run options: --seed 51148
+
+# Running:
+
+.........
+
+Finished in 18.520137s, 0.4860 runs/s, 0.7019 assertions/s.
+
+9 runs, 13 assertions, 0 failures, 0 errors, 0 skips
+-----------------------------------------------------------------
+=== test_max44009_gy49.rb ===============================================
+Run options: --seed 46297
+
+# Running:
+
+...
+
+Finished in 0.027378s, 109.5757 runs/s, 109.5757 assertions/s.
+
+3 runs, 3 assertions, 0 failures, 0 errors, 0 skips
+-----------------------------------------------------------------
+=== test_Raspberry_Pi_IoT.rb ===============================================
+Run options: --seed 32025
+
+# Running:
+
+.
+
+Finished in 0.003285s, 304.4013 runs/s, 304.4013 assertions/s.
+
+1 runs, 1 assertions, 0 failures, 0 errors, 0 skips
+-----------------------------------------------------------------
+=== test_thermal.rb ===============================================
+Run options: --seed 61785
+
+# Running:
+
+.
+
+Finished in 0.003480s, 287.3191 runs/s, 1149.2763 assertions/s.
+
+1 runs, 4 assertions, 0 failures, 0 errors, 0 skips
+-----------------------------------------------------------------

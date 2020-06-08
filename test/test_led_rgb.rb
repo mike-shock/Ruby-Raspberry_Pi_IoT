@@ -2,15 +2,15 @@
 
 require 'minitest/autorun'
 
-#$LOAD_PATH << "../lib"
-require 'led_rgb'
+$LOAD_PATH << "../lib" unless ARGV[0] == "gem"
+require 'iot/led_rgb'
 
 class RaspberryPiIoT_LedRgbTest < Minitest::Test
   def setup
     @red = 17
     @green = 27
     @blue = 22
-    @rgb = LED::RGB.new(@red, @green, @blue)
+    @rgb = IoT::LED::RGB.new(@red, @green, @blue)
     @time_on = 0.25
     @time_off = 0.25
   end

@@ -2,14 +2,14 @@
 
 require 'minitest/autorun'
 
-#$LOAD_PATH << "../lib"
-require 'led'
+$LOAD_PATH << "../lib" unless ARGV[0] == "gem"
+require 'iot/led'
 
 class RaspberryPiIoT_LedTest < Minitest::Test
   def setup
     @pin = 18
     @color = :red
-    @led = LED.new(@pin)
+    @led = IoT::LED.new(@pin)
     @led.off
   end
 

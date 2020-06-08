@@ -1,13 +1,16 @@
 #!/usr/bin/ruby
 
-$LOAD_PATH << "../lib"
-require "ds18b20"
+$LOAD_PATH << "../lib" unless ARGV[0] == "gem"
+#require 'raspberry_pi_iot'
+require "iot/ds18b20"
 
-sensor = DS18B20.new
+sensor = IoT::DS18B20.new
 printf "=== %s DEMO ===\n", sensor.name
 
-10.times do
+t = 6
+t.times do |n|
   sensor.read_data
+  printf "%02d ", n
   print "Temperature: "
   printf "%7.4f°C ",  sensor.celsius
   printf "%7.4f°Ré ", sensor.reaumur

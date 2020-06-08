@@ -2,7 +2,7 @@
 
 require 'minitest/autorun'
 
-#$LOAD_PATH << "../lib"
+$LOAD_PATH << "../lib" unless ARGV[0] == "gem"
 require "thermal_sensor"
 
 class RaspberryPiIoT_ThermalSensorTest < MiniTest::Test

@@ -2,8 +2,8 @@
 
 require 'minitest/autorun'
 
-#$LOAD_PATH << "../lib"
-require 'bh1750'
+$LOAD_PATH << "../lib" unless ARGV[0] == "gem"
+require 'iot/bh1750'
 
 class RaspberryPiIoT_BH1750Test < MiniTest::Test
 
@@ -11,7 +11,7 @@ class RaspberryPiIoT_BH1750Test < MiniTest::Test
     @bus = 1
     @address = 0x23
     @addr_s  = sprintf("%02x", @address)
-    @sensor = BH1750.new(@address, @bus)
+    @sensor = IoT::BH1750.new(@address, @bus)
   end
 
   def test_i2c_bus

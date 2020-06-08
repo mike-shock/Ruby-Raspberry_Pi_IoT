@@ -1,8 +1,8 @@
-require 'temperature_sensor'
+require_relative 'iot/temperature_sensor'
 
 # ThermalSensor - Raspberry Pi internal SoC temperature sensor
 module RaspberryPi
-  class ThermalSensor < TemperatureSensor
+  class ThermalSensor < IoT::TemperatureSensor
 
     def initialize
       @name = 'Internal Thermal Zone'
@@ -19,4 +19,3 @@ module RaspberryPi
     end
   end
 end
-

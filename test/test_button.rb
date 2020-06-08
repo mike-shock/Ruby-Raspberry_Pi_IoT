@@ -2,14 +2,14 @@
 
 require 'minitest/autorun'
 
-#$LOAD_PATH << "../lib"
-require "button"
+$LOAD_PATH << "../lib" unless ARGV[0] == "gem"
+require "iot/button"
 
 class RaspberryPiIoT_ButtonTest < MiniTest::Test
 
   def setup
     @pin = 21
-    @button = Button.new(@pin)
+    @button = IoT::Button.new(@pin)
     @button.set_timeout 12
   end
 

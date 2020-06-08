@@ -1,11 +1,9 @@
-require 'raspberry_pi'
-require 'receptor'
-require 'effector'
+require_relative 'raspberry_pi_iot/version'
+require_relative 'raspberry_pi'
+require_relative 'iot'
 
 module RaspberryPiIoT
-  VERSION = "0.0.11"
 
   class Error < StandardError
   end
-  # Your code goes here...
 end

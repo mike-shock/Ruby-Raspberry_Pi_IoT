@@ -2,8 +2,8 @@
 
 require 'minitest/autorun'
 
-#$LOAD_PATH << "../lib"
-require 'max44009'
+$LOAD_PATH << "../lib" unless ARGV[0] == "gem"
+require 'iot/max44009'
 
 class RaspberryPiIoT_MAX44009Test < MiniTest::Test
 
@@ -11,7 +11,7 @@ class RaspberryPiIoT_MAX44009Test < MiniTest::Test
     @bus = 1
     @address = 0x4a
     @addr_s  = sprintf("%02x", @address)
-    @sensor = MAX44009.new
+    @sensor = IoT::MAX44009.new
   end
 
   def test_i2c_bus
