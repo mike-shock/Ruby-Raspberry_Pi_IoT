@@ -17,7 +17,7 @@ module RaspberryPi
 
   # Return hardware info as a hash
   def self.hardware_info
-    info = {}
+    info = {"Model" => self.model_name}
     lines = ` pinout | grep ': '`
     lines << `cat /proc/cpuinfo | grep ': '`
     lines.split("\n").each do |line|

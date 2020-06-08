@@ -6,6 +6,8 @@ require 'raspberry_pi'
 printf "=== %s DEMO ===\n", 'Info'
 printf "Model: %s\n", RaspberryPi.model_name()
 
+p RaspberryPi.hardware_info
+
 RaspberryPi.hardware_info().each do |k, v|
   printf "%s: %s\n", k, v
 end
