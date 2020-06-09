@@ -21,26 +21,26 @@ To use this library you should do:
 
    sudo apt-get install ruby-dev
 
-2. Download and install the bcm2835-1.xx.tar.gz library:
+2. Download and install the bcm2835-1.xx.tar.gz library, e. g.:
 
    wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.58.tar.gz
-   
-   tar zxvf bcm2835-1.xx.tar.gz
-   
-   cd bcm2835-1.xx
-   
+
+   tar zxvf bcm2835-1.58.tar.gz
+
+   cd bcm2835-1.58
+
    ./configure
-   
+
    make
-   
+
    sudo make check
-   
+
    sudo make install
 
 3. Install the latest version of gem:
 
-   gem install raspberry_pi_iot.gem
-   
+   gem install raspberry_pi_iot
+
 
 ## Plans:
 
