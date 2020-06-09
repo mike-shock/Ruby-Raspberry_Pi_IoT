@@ -9,6 +9,10 @@ it's such a fun to do physical programming! But I love to program in Ruby.
 So I tried to make a pragmatic set of useful IoT libraries for the Ruby language 
 for all who want to program for Raspberry Pi in Ruby.
 
+I taught sachoolchildren in a Raspberry Pi Code Club to write OO-programs that
+interact with physical devices. And I found Ruby to be a very effective tool
+in teaching IoT programming.
+
 ## Installation
 
 To use this library you should do:

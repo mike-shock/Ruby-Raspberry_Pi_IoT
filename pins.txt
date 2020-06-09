@@ -1,4 +1,4 @@
-Connections for testing
+Wiring connections for testing
 
 Pin numbering: [physical] (BCM) {wPi}
 
