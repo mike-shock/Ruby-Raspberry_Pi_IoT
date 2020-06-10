@@ -1,4 +1,7 @@
-Implemented & Tested:
+```
+IMPLEMENTED:
+ Implemented & Tested:
+  receptors:
 + BH1750		Receptor	I2C		Luminocity sensor
 + BME280		Receptor	I2C		Temperature, humidity & pressure sensor
 + BMP280		Receptor	I2C		Temperature & pressure sensor: 20-bit
@@ -9,53 +12,56 @@ Implemented & Tested:
 + Thermal_Sensor	Receptor	internal	Temperature sensor on Raspberry Pi board
 + Push Button/KY-004	Receptor	1-pin		Touch sensor
 
+  effectors:
 + LED			Effector	1-pin		Light
 + LED_RGB/KY-016	Effector	3-pin		3-color RGB LED module
 
-Planned to be done first:
-  LED PWM		Effector	1-pin		Light
-
-Not implemented:
+ Not tested:
 ~ BMP085		Receptor	I2C		Pressure sensor: 16..19-bit
 ~ BMP180		Receptor	I2C		Pressure sensor
 
-displays:
-  Official Touch Screen	Effector			Official Raspberry Pi 7" 800×480 Touchscreen Display
-  ACM1602ni		Effector	I2C		LCD Controller: 5V, 2 lines x 16 characters
-  AQM0802i		Effector	I2C		LCD display 
-  QC1620A/HD44780	Effector			LCD 16x2 (16 characters wide, 2 rows) display
-  SH5461AS		Effector			0.56" 7 Segment 4 Digit common anode red LED digital display
-  WH1602		Effector			LCD display
-  MAX7219		Effector	I2C?		Dot Matrix Module 
-  XPT2046		Effector	SPI		Waveshare 3.5" 320*480 LCD TFT Touch Screen Display with Stylus
-  PiTFT Plus 3.5"	Effector			
-  SSD1306		Effector	I2C/IIC		0.91" 128x32 Blue OLED LCD Display module
+NOT implemented:
 
-sensors:
+ Planned to be done first:
+  LED PWM		Effector	1-pin		Light
+
+ sensors:
   ADT7410i		Receptor	I2C		Temperature sensor: ±0.5°C Accurate, 16-bit Digital
-  D6T-44LI				I2C		MEMS IR sensor 
-  grid-eyei				I2C		Panasonic Grid-EYE Infrared Array Sensor
-  HD44780i				I2C		LCD display
-  HDC1000i				I2C		Low Power, High Accuracy Digital Humidity Sensor with Temperature Sensor
-  MPL115a2i				I2C		I²C Barometric Pressure/Temperature Sensor
-  Si70xxi				I2C		Relative Humidity and Temperature Sensor family
+  D6T-44LI		Receptor	I2C		MEMS IR sensor 
+  grid-eyei		Receptor	I2C		Panasonic Grid-EYE Infrared Array Sensor
+  HDC1000i		Receptor	I2C		Low Power, High Accuracy Digital Humidity Sensor with Temperature Sensor
+  MPL115a2i		Receptor	I2C		I²C Barometric Pressure/Temperature Sensor
+  Si70xxi		Receptor	I2C		Relative Humidity and Temperature Sensor family
   TL1838		Receptor			IR flame sensor
 
-  U-blox 7 GPS/Glonass	Receptor	USB		Sattelite Navigation Receiver
+  U-blox 7 GPS/Glonass	Receptor	USB?		Sattelite Navigation Receiver
 
-lihts:
+ lights:
   WS2801 LED/SMD 5050	Effector
   WS2802 LED strip	Effector	SPI		addressable full-color RGB light module
-  WS2812 8 LED Ring	Effector	1-pin		addressable full-color RGB light module
   WS2812 8 LED Line	Effector	1-pin		addressable full-color RGB light module
+  WS2812 8 LED Ring	Effector	1-pin		addressable full-color RGB light module
   WS2812 12 LED Ring	Effector	1-pin		addressable full-color RGB light module
   WS2812 LED Matrix	Effector	1-pin		addressable full-color RGB light module
 
-Camera:
+ displays:
+  ACM1602ni		Effector	I2C		LCD Controller: 5V, 2 lines x 16 characters
+  AQM0802i		Effector	I2C		LCD display 
+  HD44780i		Effector	I2C		LCD display
+  MAX7219		Effector	I2C?		Dot Matrix Module 
+  Official Touch Screen	Effector			Official Raspberry Pi 7" 800×480 Touchscreen Display
+  PiTFT Plus 3.5"	Effector			
+  QC1620A/HD44780	Effector			LCD 16x2 (16 characters wide, 2 rows) display
+  SH5461AS		Effector			0.56" 7 Segment 4 Digit common anode red LED digital display
+  SSD1306		Effector	I2C/IIC		0.91" 128x32 Blue OLED LCD Display module
+  WH1602		Effector			LCD display
+  XPT2046		Effector	SPI		Waveshare 3.5" 320*480 LCD TFT Touch Screen Display with Stylus
+
+ cameras:
   Pi Camera V2		R+E				Raspberry Pi 5MP 2592 x 1944 Camera Module
   Pi NoIR Camera V2	R+E				Raspberry Pi NoIR Camera Module
 
-HATs:
+ HATs:
   Sense HAT		R+E		HAT:I2C		LED matrix + T,H,P sensor + hyroscope + Joystick
   PoE HAT		R+E				Official Power over Ethernet (PoE) HAT
   Flick HAT		Receptor	HAT:i2C		Flick - 3D Gesture Sensor HAT
@@ -65,13 +71,13 @@ HATs:
   2.7_HAT_B		Effector	HAT:SPI		WaveShare 2.7" 264x176 3-color (white, black, red) e-Paper/e-ink display HAT
   2.13_HAT		Effector	HAT:SPI		WaveShare 2.13" 250x122 2-color(white, black) e-Paper/e-Ink display HAT
 
-16in1 set:
+ 16in1 set:
   KY-018		Receptor			Photosensitive resistance sensor module
   KY-026		Receptor			Flame sensor module
   SW-460D		Receptor			Tilt angle sensor module
   SW-420		Receptor			Vibration sensor module
   86009			Receptor			Infrared obstacle avoidance sensor
-  KY-008		Effector			Red Laser 650nm transmitter head module
+  KY-008		Effector			Red 650nm laser diode transmitter module
   KY-037/LM393		Receptor			Sound Microphone sensor module
 + DHT-11		Receptor			Temperature & Humidity sensor module
   HC-SR04		Receptor			Ultrasonic sensor
@@ -83,14 +89,14 @@ HATs:
   DS1302		Receptor			Real-Time Clock (RTC) module
   FZ0828		Receptor			Rain-drop sensor module
 
-37in1 set:
+ 37in1 set:
 + KY-001		Receptor	1-wire		DS18B20 temperature sensor module
-  KY-002		Receptor			Vibration / shock switch module
-  KY-003		Receptor			Hall magnetic sensor module
-  KY-004		Effector			Mechanical Key switch / push button module
+  KY-002		Receptor	1-pin		Vibration / shock switch module
+  KY-003		Receptor	1-pin		Hall magnetic sensor module
++ KY-004		Effector	1-pin		Mechanical Key switch / push button module
   KY-005		Effector			Infrared (IR) transmitter / emission module
-  KY-006		Effector			Small passive buzzer module
-  KY-008		Effector			Red 650nm laser diode transmitter module
+  KY-006		Effector	1-pin		Small passive buzzer module
+  KY-008		Effector	1-pin		Red 650nm laser diode transmitter module
   KY-009		Effector			3-color full-color RGB LED 5050 SMD module
   KY-010		Receptor			Optical photo interrupter/light blocking module
   KY-011		Effector			2-color 5mm green+red LED module
@@ -121,4 +127,4 @@ HATs:
   KY-038		Receptor			Microphone sound sensor module
   KY-039		Receptor			Heartbeat detector finger measuring module
   KY-040		Receptor	D		Rotary encoder module
-
+```

@@ -20,6 +20,12 @@ module IoT
       @model
     end
 
+    def read
+      @value
+    end
+
+    alias read_sensor read
+
 protected
     def name=(name)
       @name = name

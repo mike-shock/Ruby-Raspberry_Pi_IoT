@@ -24,6 +24,11 @@ class RaspberryPiIoT_BH1750Test < MiniTest::Test
     assert hex.size == 1 && hex[0] == @addr_s
   end
 
+  def test_reading_sensor
+    value = @sensor.read
+    assert value > 0.0
+  end
+
   def test_sensor_value
     value = @sensor.lux
     assert value > 0.0

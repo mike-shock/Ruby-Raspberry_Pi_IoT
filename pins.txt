@@ -1,31 +1,33 @@
-Wiring connections for testing
+Wiring connections for testing:
 
 Pin numbering: [physical] (BCM) {wPi}
 
 LED (-)---short---R330Ohm---black-----GND--- [20] GND
     (+)---long--------------yellow---------- [22] (25)
 
-
+3-pin:
 RGB [-]-----------R330Ohm---black-----GND--- [09] GND
 LED [R]---------------------red------------- [11] (17)
     [G]---------------------green----------- [13] (27)
     [B]---------------------blue------------ [15] (22)
 
-
+1-pin:
 LED (-)---short---R330Ohm---black-----GND--- [20] GND
 PWM (+)---long--------------yellow---------- [12] (18)
 
+Button ---------------------black-----GND--- [39] GND
+       ---------------------white----------- [40] (21)
+
+KY-008  (-)-----------------black-----GND--- [25] GND
+Laser   (+)-----------------red-------VCC--- [17] 3.3V
+emitter (S)-----------------green--Signal--- [37] (26) {25}
 
 NeoPixel
     VCC---------------------red-------VCC--- [01] +5V
     GND---------------------black-----GND--- [06] GND
     DIN---------------------purple----DIN--- [12] (18) PWM: GPIO10, GPIO12, GPIO18 (PWM0) or GPIO21 !
 
-
-Button ---------------------black-----GND--- [39] GND
-       ---------------------white----------- [40] (21)
-
-
+special:
 DHT11  ---------------------red-------VCC--- [02] 5V
 DHT22  ---------------------black-----GND--- [14] GND
        ---------------------purple----DATA-- [16] (23)
@@ -35,7 +37,7 @@ BH1750  --------------------red-------VCC--- [04] 5V
 MAX44009--------------------blue------GND--- [06] GND
 BME280  --------------------yellow----SCL--- [05] I2C CLOCK
 BMP280  --------------------green-----SDA--- [03] I2C DATA
-
+HTU21D
 
 1-wire:
 DS18B20---------------------black-----GND--- [06] GND

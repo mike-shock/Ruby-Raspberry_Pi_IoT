@@ -1,8 +1,9 @@
 require 'bus'
+require_relative 'digital_receptor'
 
 module IoT
   # BH1750 - ambient light sensor
-  class BH1750
+  class BH1750 < IoT::DigitalReceptor
     DEVICE     = 0x23 # I2C sensor address
     POWER_DOWN = 0x00 # off state
     POWER_ON   = 0x01 # on state
@@ -24,20 +25,21 @@ module IoT
       @device = I2CDevice.new(address: DEVICE, driver: I2CDevice::Driver::I2CDev.new(@i2c_bus))
       @resolution = ONE_TIME_HIGH_RES_MODE_1
       @length = 2
-      @value = read_sensor
+      @value = read
     end
 
     # Read raw data from sensor and convert it to numeric
-    def read_sensor
+    def read
       data = @device.i2cget(@resolution, @length)
       @value = to_f(data)
     end
 
     # Return value in Lux
     def lux
-      read_sensor
+      read
       @value
     end
+
 
     def name
       @sensor_name

@@ -7,6 +7,7 @@ LIBRARY=gem
 LOG=./test.txt
 rm $LOG
 
+echo Testing with "$LIBRARY" library...
 for f in test_*.rb; do
  echo "=== $f ===============================================" >> $LOG
  ./$f $LIBRARY >> $LOG

@@ -43,7 +43,7 @@ To use this library you should do:
 
 ## Usage
 
-Main classes are described in the [description](./DESCRIPTION.md).
+Main classes with examples of usage are described [here](./DESCRIPTION.md).
 Samples of usage can be run in the demo/ sub-directory.
 
 ## Plans:
