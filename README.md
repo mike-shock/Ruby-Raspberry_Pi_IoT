@@ -41,12 +41,16 @@ To use this library you should do:
 
    gem install raspberry_pi_iot
 
+## Usage
+
+Main classes are described in the [description](./DESCRIPTION.md).
+Samples of usage can be run in the demo/ sub-directory.
 
 ## Plans:
 
 * Support for more devices (I2C, SPI, LED strip & matrix), SenseHAT, Official Display (brightness, orientation).
 
-* Better functionality for existing classes (Button, etc.)
+* Better functionality for existing classes (Button, LED, etc.)
 
 * More tests.
 
