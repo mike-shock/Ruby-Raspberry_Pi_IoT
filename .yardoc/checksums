@@ -1,5 +1,5 @@
 lib/iot/actuator.rb 198d937fa8997bf828f98124d21a7a67cff3d5ff
-lib/iot/bh1750.rb 9752900beea7c9a46ede6ae50e0428ff3d9820f1
+lib/iot/bh1750.rb ee273e7fe1343b3f5e8a09060fa5336d26cf12fc
 lib/iot/binary_actuator.rb 932dc80d115a7707f540b6e83e9940afdb679b8d
 lib/iot/binary_effector.rb e7c12708fb8c75cf2106f24ce0b9a4dff9c3db0d
 lib/iot/binary_receptor.rb 20dad567d8017c102b8f700440a166d9e4eabf04
@@ -19,7 +19,7 @@ lib/iot/led_pwm.rb 0c0a9d414ee3e4033cb980efa9b3f08b521ac54a
 lib/iot/led.rb f672f12dbe5f9f46f9ae041bebb9d3a180981cc7
 lib/iot/led_rgb.rb 1ec1efacf4ac73bfb68ee896d52b0a658b77956f
 lib/iot/max44009.rb f871e02d7cf43fe013e5c805463498e94aede015
-lib/iot/receptor.rb 9983e3f8e12d45dba64abd4f5d7d7ecf6c162a28
+lib/iot/receptor.rb 101e7ee50bb3e788fabcf5641f74b3a57e1ec8c7
 lib/iot/sensor.rb 91e1d943304b2962b67b898a4ab9bdb3fa55eaf1
 lib/iot/temperature_sensor.rb 75e6097cfce78a39f7c0c23435003570473f934c
-lib/raspberry_pi_iot/version.rb a933a45273148f21abd630b00462cfa51e323859
+lib/raspberry_pi_iot/version.rb 4847025b7d0cb771287d6b3118aff6bc8090f369

@@ -13,8 +13,9 @@ IMPLEMENTED:
 + Push Button/KY-004	Receptor	1-pin		Touch sensor
 
   effectors:
-+ LED			Effector	1-pin		Light
++ LED			Effector	1-pin		Ordinary LED
 + LED_RGB/KY-016	Effector	3-pin		3-color RGB LED module
++ KY-008		Effector	1-pin		Red 650nm laser diode transmitter module
 
  Not tested:
 ~ BMP085		Receptor	I2C		Pressure sensor: 16..19-bit
@@ -77,7 +78,7 @@ NOT implemented:
   SW-460D		Receptor			Tilt angle sensor module
   SW-420		Receptor			Vibration sensor module
   86009			Receptor			Infrared obstacle avoidance sensor
-  KY-008		Effector			Red 650nm laser diode transmitter module
++ KY-008		Effector			Red 650nm laser diode transmitter module
   KY-037/LM393		Receptor			Sound Microphone sensor module
 + DHT-11		Receptor			Temperature & Humidity sensor module
   HC-SR04		Receptor			Ultrasonic sensor
@@ -96,7 +97,7 @@ NOT implemented:
 + KY-004		Effector	1-pin		Mechanical Key switch / push button module
   KY-005		Effector			Infrared (IR) transmitter / emission module
   KY-006		Effector	1-pin		Small passive buzzer module
-  KY-008		Effector	1-pin		Red 650nm laser diode transmitter module
++ KY-008		Effector	1-pin		Red 650nm laser diode transmitter module
   KY-009		Effector			3-color full-color RGB LED 5050 SMD module
   KY-010		Receptor			Optical photo interrupter/light blocking module
   KY-011		Effector			2-color 5mm green+red LED module

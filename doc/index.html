@@ -68,6 +68,10 @@ it’s such a fun to do physical programming! But I love to program in Ruby.
 So I tried to make a pragmatic set of useful IoT libraries for the Ruby language 
 for all who want to program for Raspberry Pi in Ruby.</p>
 
+<p>I taught sachoolchildren in a Raspberry Pi Code Club to write OO-programs that
+interact with physical devices. And I found Ruby to be a very effective tool
+in teaching IoT programming.</p>
+
 <h2 id="installation">Installation</h2>
 
 <p>To use this library you should do:</p>
@@ -79,13 +83,13 @@ for all who want to program for Raspberry Pi in Ruby.</p>
     <p>sudo apt-get install ruby-dev</p>
   </li>
   <li>
-    <p>Download and install the bcm2835-1.xx.tar.gz library:</p>
+    <p>Download and install the bcm2835-1.xx.tar.gz library, e. g.:</p>
 
     <p>wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.58.tar.gz</p>
 
-    <p>tar zxvf bcm2835-1.xx.tar.gz</p>
+    <p>tar zxvf bcm2835-1.58.tar.gz</p>
 
-    <p>cd bcm2835-1.xx</p>
+    <p>cd bcm2835-1.58</p>
 
     <p>./configure</p>
 
@@ -98,9 +102,14 @@ for all who want to program for Raspberry Pi in Ruby.</p>
   <li>
     <p>Install the latest version of gem:</p>
 
-    <p>gem install raspberry_pi_iot.gem</p>
+    <p>gem install raspberry_pi_iot</p>
   </li>
 </ol>
+
+<h2 id="usage">Usage</h2>
+
+<p>Main classes with examples of usage are described <a href="./DESCRIPTION.md">here</a>.
+Samples of usage can be run in the demo/ sub-directory.</p>
 
 <h2 id="plans">Plans:</h2>
 
@@ -109,7 +118,7 @@ for all who want to program for Raspberry Pi in Ruby.</p>
     <p>Support for more devices (I2C, SPI, LED strip &amp; matrix), SenseHAT, Official Display (brightness, orientation).</p>
   </li>
   <li>
-    <p>Better functionality for existing classes (Button, etc.)</p>
+    <p>Better functionality for existing classes (Button, LED, etc.)</p>
   </li>
   <li>
     <p>More tests.</p>
@@ -126,7 +135,7 @@ for all who want to program for Raspberry Pi in Ruby.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Mon Jun  8 17:02:31 2020 by
+  Generated on Wed Jun 10 16:52:49 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.20 (ruby-2.5.5).
 </div>
