@@ -1,22 +1,22 @@
 === test_bh1750.rb ===============================================
-Run options: --seed 53298
+Run options: --seed 2043
 
 # Running:
 
 ....
 
-Finished in 0.027978s, 142.9696 runs/s, 142.9696 assertions/s.
+Finished in 0.028173s, 141.9806 runs/s, 141.9806 assertions/s.
 
 4 runs, 4 assertions, 0 failures, 0 errors, 0 skips
 -----------------------------------------------------------------
 === test_bme280.rb ===============================================
-Run options: --seed 21081
+Run options: --seed 22075
 
 # Running:
 
 F..
 
-Finished in 0.041686s, 71.9659 runs/s, 287.8635 assertions/s.
+Finished in 0.038072s, 78.7989 runs/s, 315.1957 assertions/s.
 
   1) Failure:
 RaspberryPiIoT_BMP280Test#test_humidity_value [./test_bme280.rb:55]:
@@ -25,149 +25,160 @@ Expected false to be truthy.
 3 runs, 12 assertions, 1 failures, 0 errors, 0 skips
 -----------------------------------------------------------------
 === test_bmp280.rb ===============================================
-Run options: --seed 11637
+Run options: --seed 52806
 
 # Running:
 
 ..
 
-Finished in 0.035056s, 57.0513 runs/s, 313.7822 assertions/s.
+Finished in 0.031242s, 64.0161 runs/s, 352.0887 assertions/s.
 
 2 runs, 11 assertions, 0 failures, 0 errors, 0 skips
 -----------------------------------------------------------------
 === test_button.rb ===============================================
-Run options: --seed 65304
+Run options: --seed 57870
 
 # Running:
 
-Waiting for 1 short press (< 1 second)...
+Waiting for a press...
+.Waiting for 1 short press (< 1 second)...
 .Waiting for double press (2 sequential short presses)...
-.Waiting for a press...
 .Waiting for 1 long press (> 1 second)...
 .
 
-Finished in 60.035713s, 0.0666 runs/s, 0.0333 assertions/s.
+Finished in 60.037097s, 0.0666 runs/s, 0.0333 assertions/s.
 
 4 runs, 2 assertions, 0 failures, 0 errors, 0 skips
 -----------------------------------------------------------------
 === test_dht11.rb ===============================================
-Run options: --seed 40347
+Run options: --seed 52868
 
 # Running:
 
 ..
 
-Finished in 0.953348s, 2.0979 runs/s, 5.2447 assertions/s.
+Finished in 0.953000s, 2.0986 runs/s, 5.2466 assertions/s.
 
 2 runs, 5 assertions, 0 failures, 0 errors, 0 skips
 -----------------------------------------------------------------
 === test_dht22.rb ===============================================
-Run options: --seed 61166
+Run options: --seed 1665
 
 # Running:
 
 ..
 
-Finished in 0.953121s, 2.0984 runs/s, 5.2459 assertions/s.
+Finished in 0.953430s, 2.0977 runs/s, 5.2442 assertions/s.
 
 2 runs, 5 assertions, 0 failures, 0 errors, 0 skips
 -----------------------------------------------------------------
 === test_ds18b20.rb ===============================================
-Run options: --seed 17438
+Run options: --seed 35331
 
 # Running:
 
 .
 
-Finished in 0.925298s, 1.0807 runs/s, 4.3229 assertions/s.
+Finished in 0.902606s, 1.1079 runs/s, 4.4316 assertions/s.
 
 1 runs, 4 assertions, 0 failures, 0 errors, 0 skips
 -----------------------------------------------------------------
 === test_helper.rb ===============================================
-Run options: --seed 51807
+Run options: --seed 19152
 
 # Running:
 
 
 
-Finished in 0.001973s, 0.0000 runs/s, 0.0000 assertions/s.
+Finished in 0.001872s, 0.0000 runs/s, 0.0000 assertions/s.
 
 0 runs, 0 assertions, 0 failures, 0 errors, 0 skips
 -----------------------------------------------------------------
+=== test_htu21d.rb ===============================================
+Run options: --seed 46260
+
+# Running:
+
+..
+
+Finished in 0.408595s, 4.8948 runs/s, 12.2371 assertions/s.
+
+2 runs, 5 assertions, 0 failures, 0 errors, 0 skips
+-----------------------------------------------------------------
 === test_info.rb ===============================================
-Run options: --seed 9430
+Run options: --seed 24217
 
 # Running:
 
 .....
 
-Finished in 1.392537s, 3.5906 runs/s, 8.6174 assertions/s.
+Finished in 1.455289s, 3.4357 runs/s, 8.2458 assertions/s.
 
 5 runs, 12 assertions, 0 failures, 0 errors, 0 skips
 -----------------------------------------------------------------
 === test_ky008.rb ===============================================
-Run options: --seed 36040
+Run options: --seed 55078
 
 # Running:
 
 ...
 
-Finished in 12.759853s, 0.2351 runs/s, 0.3135 assertions/s.
+Finished in 12.759427s, 0.2351 runs/s, 0.3135 assertions/s.
 
 3 runs, 4 assertions, 0 failures, 0 errors, 0 skips
 -----------------------------------------------------------------
 === test_led.rb ===============================================
-Run options: --seed 32256
+Run options: --seed 48330
 
 # Running:
 
 ....
 
-Finished in 12.512438s, 0.3197 runs/s, 0.3197 assertions/s.
+Finished in 12.511824s, 0.3197 runs/s, 0.3197 assertions/s.
 
 4 runs, 4 assertions, 0 failures, 0 errors, 0 skips
 -----------------------------------------------------------------
 === test_led_rgb.rb ===============================================
-Run options: --seed 33248
+Run options: --seed 23790
 
 # Running:
 
 .........
 
-Finished in 18.519828s, 0.4860 runs/s, 0.7020 assertions/s.
+Finished in 18.518859s, 0.4860 runs/s, 0.7020 assertions/s.
 
 9 runs, 13 assertions, 0 failures, 0 errors, 0 skips
 -----------------------------------------------------------------
 === test_max44009_gy49.rb ===============================================
-Run options: --seed 40209
+Run options: --seed 50569
 
 # Running:
 
 ...
 
-Finished in 0.027353s, 109.6773 runs/s, 109.6773 assertions/s.
+Finished in 0.027480s, 109.1689 runs/s, 109.1689 assertions/s.
 
 3 runs, 3 assertions, 0 failures, 0 errors, 0 skips
 -----------------------------------------------------------------
 === test_Raspberry_Pi_IoT.rb ===============================================
-Run options: --seed 43477
+Run options: --seed 6903
 
 # Running:
 
 .
 
-Finished in 0.003202s, 312.3321 runs/s, 312.3321 assertions/s.
+Finished in 0.003287s, 304.2024 runs/s, 304.2024 assertions/s.
 
 1 runs, 1 assertions, 0 failures, 0 errors, 0 skips
 -----------------------------------------------------------------
 === test_thermal.rb ===============================================
-Run options: --seed 31887
+Run options: --seed 9997
 
 # Running:
 
 .
 
-Finished in 0.003941s, 253.7533 runs/s, 1015.0133 assertions/s.
+Finished in 0.003647s, 274.1649 runs/s, 1096.6596 assertions/s.
 
 1 runs, 4 assertions, 0 failures, 0 errors, 0 skips
 -----------------------------------------------------------------

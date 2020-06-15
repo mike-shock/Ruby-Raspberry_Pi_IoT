@@ -3,16 +3,15 @@
 require 'minitest/autorun'
 
 $LOAD_PATH << "../lib" unless ARGV[0] == "gem"
-require "iot"
-require "iot/ds18b20"
+require "iot/htu21d"
 
-class RaspberryPiIoT_DS18B20Test < MiniTest::Test
+class RaspberryPiIoT_HTU21DTest < MiniTest::Test
 
   def setup
-    @sensor = IoT::DS18B20.new
+    @sensor = IoT::HTU21D.new
   end
 
-  def test_sensor_value
+  def test_temperature
     c = @sensor.celsius
     assert c > 15.0
 
@@ -25,5 +24,11 @@ class RaspberryPiIoT_DS18B20Test < MiniTest::Test
     k = @sensor.temperature(:kelvin)
     assert k > f
   end
+
+  def test_humidity
+    h = @sensor.humidity
+    assert h > 10.0
+  end
 end
+
 

@@ -3,7 +3,7 @@ Wiring connections for testing:
 Pin numbering: [physical] (BCM) {wPi}
 
 LED (-)---short---R330Ohm---black-----GND--- [20] GND
-    (+)---long--------------yellow---------- [22] (25)
+    (+)---long--------------yellow---------- [22] (25) {6}
 
 3-pin:
 RGB [-]-----------R330Ohm---black-----GND--- [09] GND
@@ -16,7 +16,7 @@ LED (-)---short---R330Ohm---black-----GND--- [20] GND
 PWM (+)---long--------------yellow---------- [12] (18)
 
 Button ---------------------black-----GND--- [39] GND
-       ---------------------white----------- [40] (21)
+       ---------------------white----------- [40] (21) {29}
 
 KY-008  (-)-----------------black-----GND--- [25] GND
 Laser   (+)-----------------red-------VCC--- [17] 3.3V

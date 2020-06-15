@@ -14,6 +14,7 @@ lib/iot/digital_sensor.rb 98073224fa5570b50872c97270f137c1c9751386
 lib/iot/ds18b20.rb 0a22db69da2c2b6f28ad88c371b741dd299a6bc4
 lib/iot/effector.rb 739b486202380a0e7ce4ce9d86f0d976ca1ed674
 lib/iot/hcsr501.rb 213d123fdf12982387c257e94c1521f32d70b308
+lib/iot/htu21d.rb d7469456ac257707a0c1ba6b00a7f7c2cc89bc13
 lib/iot/humiture_sensor.rb 1e2d6705081eeb57dcea95ea98974da86f172216
 lib/iot/led_pwm.rb 0c0a9d414ee3e4033cb980efa9b3f08b521ac54a
 lib/iot/led.rb f672f12dbe5f9f46f9ae041bebb9d3a180981cc7
@@ -22,4 +23,4 @@ lib/iot/max44009.rb f871e02d7cf43fe013e5c805463498e94aede015
 lib/iot/receptor.rb 101e7ee50bb3e788fabcf5641f74b3a57e1ec8c7
 lib/iot/sensor.rb 91e1d943304b2962b67b898a4ab9bdb3fa55eaf1
 lib/iot/temperature_sensor.rb 75e6097cfce78a39f7c0c23435003570473f934c
-lib/raspberry_pi_iot/version.rb 4847025b7d0cb771287d6b3118aff6bc8090f369
+lib/raspberry_pi_iot/version.rb b04a7724ed1b0c5db1ec900f1d7b45b3053bce93

@@ -68,6 +68,9 @@ it’s such a fun to do physical programming! But I love to program in Ruby.
 So I tried to make a pragmatic set of useful IoT libraries for the Ruby language 
 for all who want to program for Raspberry Pi in Ruby.</p>
 
+<p>This gem is an interfacing library for other Ruby gems that work with different devices 
+on SBCs of Raspberry Pi family.</p>
+
 <p>I taught sachoolchildren in a Raspberry Pi Code Club to write OO-programs that
 interact with physical devices. And I found Ruby to be a very effective tool
 in teaching IoT programming.</p>
@@ -77,33 +80,35 @@ in teaching IoT programming.</p>
 <p>To use this library you should do:</p>
 
 <ol>
+  <li>Install the Ruby development version (to compile the extensions):
+<code>
+sudo apt-get install ruby-dev
+</code></li>
   <li>
-    <p>Install the Ruby development version (to compile the extensions):</p>
+    <p>Download and install the bcm2835-1.xx.tar.gz library, e. g.:
+```
+wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.58.tar.gz</p>
 
-    <p>sudo apt-get install ruby-dev</p>
+    <p>tar zxvf bcm2835-1.58.tar.gz
+cd bcm2835-1.58
+./configure
+make
+sudo make check
+sudo make install
+```</p>
   </li>
   <li>
-    <p>Download and install the bcm2835-1.xx.tar.gz library, e. g.:</p>
+    <p>For some external gems additional libraries should be installed.</p>
 
-    <p>wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.58.tar.gz</p>
-
-    <p>tar zxvf bcm2835-1.58.tar.gz</p>
-
-    <p>cd bcm2835-1.58</p>
-
-    <p>./configure</p>
-
-    <p>make</p>
-
-    <p>sudo make check</p>
-
-    <p>sudo make install</p>
+    <p>a) to use output on a SSD1306 display with the help of the ‘SSD1306’ gem you’ll need to 
+<code>
+sudo apt-get install libmagickwand-dev
+</code></p>
   </li>
-  <li>
-    <p>Install the latest version of gem:</p>
-
-    <p>gem install raspberry_pi_iot</p>
-  </li>
+  <li>Install the latest version of gem:
+<code>
+gem install raspberry_pi_iot
+</code></li>
 </ol>
 
 <h2 id="usage">Usage</h2>
@@ -115,13 +120,13 @@ Samples of usage can be run in the demo/ sub-directory.</p>
 
 <ul>
   <li>
-    <p>Support for more devices (I2C, SPI, LED strip &amp; matrix), SenseHAT, Official Display (brightness, orientation).</p>
+    <p>Support for <a href="./supported_devices.md">more devices</a> (I2C, SPI, LED strip &amp; matrix), SenseHAT, Official Display (brightness, orientation).</p>
   </li>
   <li>
     <p>Better functionality for existing classes (Button, LED, etc.)</p>
   </li>
   <li>
-    <p>More tests.</p>
+    <p>More tests and demos.</p>
   </li>
 </ul>
 
@@ -135,7 +140,7 @@ Samples of usage can be run in the demo/ sub-directory.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Wed Jun 10 16:52:49 2020 by
+  Generated on Mon Jun 15 20:05:14 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.20 (ruby-2.5.5).
 </div>

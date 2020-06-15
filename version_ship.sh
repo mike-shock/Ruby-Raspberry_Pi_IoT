@@ -8,7 +8,7 @@ sudo gem install raspberry_pi_iot
 
 git add .
 git status
-git commit -m "Classes are put into IoT module. Bugs in BMxSensor class fixed."
+git commit -m "Documentation updated. HTU21D sensor class added."
 git tag v$VERSION
 git push
 git push --tags

@@ -1,0 +1,4 @@
+40: HTU21D – Combined humidity and temperature sensor.
+68: The RTC
+69: MCP3427 2-channel ADC (The production board has 2 of these and on those boards you’ll see an extra 6A. My prototype board only has one).
+77: BMP180 – Barometric air pressure sensor.

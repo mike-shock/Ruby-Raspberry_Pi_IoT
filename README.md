@@ -9,6 +9,9 @@ it's such a fun to do physical programming! But I love to program in Ruby.
 So I tried to make a pragmatic set of useful IoT libraries for the Ruby language 
 for all who want to program for Raspberry Pi in Ruby.
 
+This gem is an interfacing library for other Ruby gems that work with different devices 
+on SBCs of Raspberry Pi family.
+
 I taught sachoolchildren in a Raspberry Pi Code Club to write OO-programs that
 interact with physical devices. And I found Ruby to be a very effective tool
 in teaching IoT programming.
@@ -35,7 +38,7 @@ To use this library you should do:
 
 3. For some external gems additional libraries should be installed.
 
-   a) to use output onto SSD1306 daisplay withy the help of the 'SSD1306' gem you'll need to 
+   a) to use output on a SSD1306 display with the help of the 'SSD1306' gem you'll need to 
 ```
    sudo apt-get install libmagickwand-dev
 ```
