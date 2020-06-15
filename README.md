@@ -18,28 +18,32 @@ in teaching IoT programming.
 To use this library you should do:
 
 1. Install the Ruby development version (to compile the extensions):
-
+```
    sudo apt-get install ruby-dev
-
+```
 2. Download and install the bcm2835-1.xx.tar.gz library, e. g.:
-
+```
    wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.58.tar.gz
 
    tar zxvf bcm2835-1.58.tar.gz
-
    cd bcm2835-1.58
-
    ./configure
-
    make
-
    sudo make check
-
    sudo make install
+```
 
-3. Install the latest version of gem:
+3. For some external gems additional libraries should be installed.
 
+   a) to use output onto SSD1306 daisplay withy the help of the 'SSD1306' gem you'll need to 
+```
+   sudo apt-get install libmagickwand-dev
+```
+
+4. Install the latest version of gem:
+```
    gem install raspberry_pi_iot
+```
 
 ## Usage
 
@@ -48,11 +52,11 @@ Samples of usage can be run in the demo/ sub-directory.
 
 ## Plans:
 
-* Support for more devices (I2C, SPI, LED strip & matrix), SenseHAT, Official Display (brightness, orientation).
+* Support for [more devices](./supported_devices.md) (I2C, SPI, LED strip & matrix), SenseHAT, Official Display (brightness, orientation).
 
 * Better functionality for existing classes (Button, LED, etc.)
 
-* More tests.
+* More tests and demos.
 
 
 ## Contributing

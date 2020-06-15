@@ -11,4 +11,5 @@ $LOAD_PATH << "../lib" unless ARGV[0] == "gem"
   sleep 3
   laser.off
   p laser.on?
+  p laser.off?
 
