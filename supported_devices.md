@@ -36,6 +36,7 @@ Y/N	Name		Type: R/ E	Connection	Usage Area	Description
 ```
  Planned to be done first:
 - LED PWM		Effector	1-pin		Light		
+- SSD1306		Effector	I2C/IIC		Display		0.91" 128x32 Blue OLED LCD Display module
 
  sensors:
 - ADT7410i		Receptor	I2C		Temperature	Temperature sensor: ±0.5°C Accurate, 16-bit Digital
@@ -63,7 +64,6 @@ Y/N	Name		Type: R/ E	Connection	Usage Area	Description
 - PiTFT Plus 3.5"	Effector			Display		
 - QC1620A/HD44780	Effector			Display		LCD 16x2 (16 characters wide, 2 rows) display
 - SH5461AS		Effector			Display		0.56" 7 Segment 4 Digit common anode red LED digital display
-- SSD1306		Effector	I2C/IIC		Display		0.91" 128x32 Blue OLED LCD Display module
 - WH1602		Effector			Display		LCD display
 - XPT2046		Effector	SPI		Display		Waveshare 3.5" 320*480 LCD TFT Touch Screen Display with Stylus
 
@@ -101,40 +101,40 @@ Y/N	Name		Type: R/ E	Connection	Usage Area	Description
 
  37in1 set:
 + KY-001		Receptor	1-wire		Temperature	DS18B20 temperature sensor module
-- KY-002		Receptor	1-pin				Vibration / shock switch module
-- KY-003		Receptor	1-pin				Hall magnetic sensor module
-+ KY-004		Effector	1-pin		Switch		Mechanical Key switch / push button module
-- KY-005		Effector			IR		Infrared (IR) transmitter / emission module
-- KY-006		Effector	1-pin		Sound		Small passive buzzer module
+- KY-002		Receptor	1-pin		Movement	Vibration / shock switch module: HIGH = vibration detected
+- KY-003		Receptor	1-pin				Hall magnetic sensor module: HIGH = magnetic field detected
++ KY-004		Effector	1-pin		Switch		Mechanical Key switch / push button module: HIGH = pressing detected
+- KY-005		Effector	?		IR		Infrared (IR) transmitter / emission module: TV control codes
+- KY-006		Effector	1-pin		Sound		Small passive buzzer module: HIGH = sound ON, LOW = sound OFF
 + KY-008		Effector	1-pin		Light		Red 650nm laser diode transmitter module
-- KY-009		Effector			Light		3-color full-color RGB LED 5050 SMD module
-- KY-010		Receptor			Light		Optical photo interrupter/light blocking module
+- KY-009		Effector	3-pin		Light		3-color full-color RGB LED 5050 SMD module
+- KY-010		Receptor	1-pin		Light		Optical photo interrupter/light blocking module: HIGH = signal interruption detected
 - KY-011		Effector			Light		2-color 5mm green+red LED module
 - KY-012		Effector	1-pin		Sound		Active buzzer 5V module
 - KY-013		Receptor	Analog		Temperature	Analog temperature sensor
 + KY-015		Receptor	Special		Humiture	Temperature and humidity digital sensor DHT11
-+ KY-016		Effector			Light		3-color RGB LED module
-- KY-017		Receptor					Mercury open optical tilt switch module
++ KY-016		Effector	3-pin		Light		3-color RGB LED module
+- KY-017		Receptor	1-pin				Mercury open optical tilt switch module: HIGH = tilt detectted
 - KY-018		Receptor	Analog		Light		Photo-resistor / light sensor module
-- KY-019		Effector	1-pin?		Switch		5V 1-channel relay module
-- KY-020		Receptor	D				Ball / tilt switch module
-- KY-021		Receptor	D				Mini magnetic reed switch (hermetic contact)
+- KY-019		Effector	1-pin		Switch		5V 1-channel relay module: LOW = relay switch is turned off
+- KY-020		Receptor	1-pin				Ball / tilt switch module: HIGH = tilt detectted
+- KY-021		Receptor	1-pin				Mini magnetic reed switch (hermetic contact): HIGH = signal detected
 - KY-022		Receptor			IR		IR 38 Khz VS1838B receiver / remote control
 - KY-023		Receptor			Movement	XY-axis+button joystick (PS2 gamepad) module
-- KY-024		Receptor	D,A				Linear magnetic Hall sensor module
-- KY-025		Receptor					Reed (hermetic contact) module
-- KY-026		Receptor					Flame detector LM393 sensor module
+- KY-024		Receptor	1-pin+A				Linear magnetic Hall sensor module: HIGH = magnetic signal detected
+- KY-025		Receptor	1-pin				Reed (hermetic contact) module: HIGH = signal detected
+- KY-026		Receptor	1-pin+A				Flame detector LM393 sensor module: HIGH = signal detected
 - KY-027		Receptor			Light		2 x Magic light cup modules
-- KY-028		Receptor	D				Digital temperature sensor module
+- KY-028		Receptor	1-pin		Temperature	Digital temperature sensor module: HIGH = temperarure threshold detected
 - KY-029		Effector			Light		Yin Yi 2-color 3mm green+red mini-LED module
-- KY-031		Receptor					Knock / tap / hit switch sensor module
-- KY-032		Receptor					Obstacle avoidance infrared (IR) sensor
-- KY-033		Receptor					Line tracking / hunt sensor module
-- KY-034		Effector			Light		7-color automatically flashing LED module
-- KY-035		Receptor					Analog Hall / Class Bihor magnetic sensor
-- KY-036		Receptor					Metal touch sensor module
-- KY-037		Receptor	A,D		Sound		High sensitivity sound detection microphone
-- KY-038		Receptor			Sound		Microphone sound sensor module
-- KY-039		Receptor					Heartbeat detector finger measuring module
+- KY-031		Receptor	1-pin				Knock / tap / hit switch sensor module: HIGH = knock detected
+- KY-032		Receptor	1-pin				Obstacle avoidance infrared (IR T+R) sensor: HIGH = obstacle detected
+- KY-033		Receptor	1-pin				Line tracking / hunt sensor module: HIGH = line detected
+- KY-034		Effector	1-pin		Light		7-color automatically flashing LED module: HIGH = set the LED on
+- KY-035		Receptor	A				Analog Hall / Class Bihor magnetic sensor
+- KY-036		Receptor	1-pin				Metal touch sensor module: HIGH = metal touch detected
+- KY-037		Receptor	1-pin+A		Sound		High sensitivity sound detection microphone: HIGH = sound threshold detected
+- KY-038		Receptor	1-pin+A		Sound		Microphone sound sensor module: HIGH = sound threshold detected
+- KY-039		Receptor	A		IR		Heartbeat detector finger measuring module
 - KY-040		Receptor	D		Rotation	Rotary encoder module
 ```
