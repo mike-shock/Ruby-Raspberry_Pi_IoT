@@ -1,6 +1,8 @@
 Wiring connections for testing:
 
 Pin numbering: [physical] (BCM) {wPi}
+device ------------------------------------- Raspberry Pi
+
 
 LED (-)---short---R330Ohm---black-----GND--- [20] GND
     (+)---long--------------yellow---------- [22] (25) {6}
@@ -38,6 +40,21 @@ MAX44009--------------------blue------GND--- [06] GND
 BME280  --------------------yellow----SCL--- [05] I2C CLOCK
 BMP280  --------------------green-----SDA--- [03] I2C DATA
 HTU21D
+
+RDM6300
+    P1_____
+    TX  [1]-----------------green-----RxD--- [10] RxD
+    RX  [2]-----------------yellow----TxD--- [08] TxD
+        [3]
+    GND [4]-----------------black-----GND--- [06] GND
+    +5V [5]-----------------red-------VCC--- [02] +5V
+    P2_____
+    ANT1[1]-----------------antenna--------- |  |
+    ANT2[2]--------------------------------- |  | no polarity
+    P3_____
+    LED [3]
+    +5V [2]-----------------crimson---VCC--- [04] +5V
+    GND [1]-----------------brown-----GND--- [39] GND
 
 1-wire:
 DS18B20---------------------black-----GND--- [06] GND

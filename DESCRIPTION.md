@@ -14,15 +14,15 @@ All the connected devices are traditionally divided into 2 main groups of classe
    +-----Effector (Actuator) ~ some thing that can effect something in the outer world.
 ```
 Sometimes both of these roles, Receptor and Effector, could be combined in one multi-component device
-like **Sense HAT**, which is equipped with sensors (temperature, humidity, pressure, joystick) 
-and actuators (LED matrix).
+like **Sense HAT**, which is equipped with receptors (temperature, humidity, pressure, etc. & joystick) 
+and effector (LED matrix).
 
 
 ### Digital Receptors and Effectors.
 
-Commonly an external device may use several GPIO pins to be connected and interact with your Raspberry Pi. 
+Commonly an external device may use several GPIO pins for connection and interaction with your Raspberry Pi. 
 And nowadays the pins of all the Raspberry Pi models are digital: HIGH and LOW electrical signals are used
-to designate logical 1 and 0. These signals are interpreted as TRUE and FALSE 
+to designate logical 1 and 0. These incoming signals are interpreted as TRUE and FALSE 
 when they are read from an external device via the pins configured as INPUT. 
 Or they mean ON and OFF when they are sent to an external device via the pins configured as OUTPUT.
 
@@ -53,9 +53,11 @@ You can send commands for switching on or off the desired color:
 
 ### Binary Receptor / Effector
 
-Many devices (such as LEds and push buttons) have only 2 states: switched on or off, 
-and they can report about their state using only 2 binary values. 
-And many sensors .
+Very many effectors (such as LEds and relay) have only 2 states: switched on or off, 
+Many receptors (like push buttons) also report about their state using only 2 binary values:
+TRUE (pin value is HIGH) and FALSE (pin value is LOW).
+And many sensors also send binary values: TRUE when a measured value 
+has reached some pre-defined threshold or FALSE when not reached.
 
 ```
 (IoT device)
@@ -111,6 +113,9 @@ which communicates with your Pi via I2C interface:
 ```
   require 'iot/bh1750'
 
-  luminosity_sensor = IoT::BH1750.new(0x23, 1) # I2C device  address and Bus number
+  luminosity_sensor = IoT::BH1750.new(0x23, 1) # I2C device address and Bus number
   printf "%02d Luminosity Level: %f lx\n", n, luminosity_sensor.read
 ```
+
+Refer to the description of the concrete protocol for detais.
+
